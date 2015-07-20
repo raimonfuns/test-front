@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="皇室,尊贵,个性,成长,等级,特权,功能,YY特权,游戏特权,YYvip,yy vip,YY会员,会员,YY,多玩,duowan">
+    <meta name="description" content="YY会员为用户提供更加尊贵的服务，这里有动态表情、头像，还能让你在频道树排名靠前；还有尊贵的YY靓号、频道靓号，还有靓、豪图标，为您点亮，彰显身份；频道考核不达标，还有加油卡、复活卡，让你的频道无忧果考核！">
+    <title>YY会员 - 我是会员 &quot;V&quot;力无限</title>
+        <link href="/assets/css/base.css" rel="stylesheet">
+<link href="/assets/css/69.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+
+</head>
+<body>
+    <div class="wrap index-wrap">
+        <!-- vip-header {-->
+        
+<div class="vip-header">
+    <div class="vip-header__inner">
+        <div class="vip-header__logo"  style="position:relative; zoom:1; margin-left:-10px;">
+        	<a target="_self" href="/vip/redirect?src=viphead"></a>
+        </div>
+        <ul class="vip-header__menu">
+            <li><a href="/" target="_self">会员首页</a></li>
+            <li><a href="/introductionsummary.html" target="_self" alllink="/vip/introduction|/p/privilege/introduction.html">会员特权</a><img src="http://dl1.vip.yystatic.com/yyvippicture/aada293afc16a87258fe8c9f85d48750.png" class="header-new-icon"/></li>
+  <!--           <li><a href="/vip/game" target="_self">游戏特权</a></li> -->
+            <li><a href="/p/nicecode/index.html" target="_self" alllink="/p/nicecode">靓号商城</a></li>
+            <li><a href="/p/activity/index.html" target="_self">活动中心</a></li>
+            <li><a href="http://show.vip.yy.com" target="_blank"><i class="purple-icon"></i>YY紫钻</a></li>
+            <li><a href="/vip/pay" target="_blank">支付中心</a></li>
+            <li><a href="http://hd.vip.yy.com/1506d8/index" target="self">PK互动</a></li>
+        </ul>
+        
+        <div class="vip-header__login" id="loginArea">
+
+        </div>
+       
+    </div>
+</div>
+
+        <!--} vip-header -->
+         <div class="container-wrap clearfix">
+        <div class="main-hd clearfix">
+            <a href="yy://pd-[sid=69&subid=2338548249]/[69]" target="_self" class="channel-link">精彩尽在69</a>
+            <ul class="main-nav" id="tabNav">
+                <!-- <li class="active"><a href="#"><span class="nav-left"></span><span class="nav-right">活动集结令</span></a></li>
+                <li><a href="#"><span class="nav-left"></span><span class="nav-right">69招募令</span></a></li> -->
+            </ul>
+        </div>
+        <div class="main-bd clearfix">     
+            <div class="tab-container__bd" id="tabContent">
+                <!-- <img src="http://dl2.vip.yystatic.com/yyvippicture/bbcc1fa52598fd151ae5a21e86edb254.png" /> -->
+            </div>
+        </div>
+        
+        <div class="main-ft clearfix">
+            <h3 class="main-title">69专场</h3>
+            <div class="slide-s3" id="slideS1">
+                                    
+                   
+                </div>
+                <p class="ft-tips">点击图片进入活动专场↑</p>
+        </div>
+    </div>
+
+        <!-- vip-footer {-->
+        <div class="vip-footer">
+    <div class="vip-footer__links">
+        <a target="_blank" href="http://www.huanju.cn/s/introduction.html">关于欢聚</a>|<a target="_blank" href="http://hr.yy.com">欢聚招聘</a>|<a target="_blank" href="http://www.huanju.cn/s/contact.html">联系欢聚</a>|<a target="_blank" href="http://www.yy.com/go.html#10">客服频道：<strong>10</strong></a>|<a target="_blank" href="http://www.huanju.cn/s/links.html">友情链接</a>|<a target="_blank" href="http://kf.yy.com/">YY客服中心</a>
+    </div>
+    <div class="vip-footer__copy">
+        <span>广州华多网络科技有限公司 版权所有 2005-2013 DuoWan.com [多玩游戏] 粤ICP备09075143号</span>|<span>备案编号：4401060102637</span>
+    </div>
+</div>
+
+
+<script>
+/*var _hmt = _hmt || [];
+(function() {
+  function loadJs(src){
+  	var hm = document.createElement("script");
+    hm.src = src;
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  }
+  loadJs("//hm.baidu.com/hm.js?1ad6c9f9d366b2902c847ffe231db6fb");
+  loadJs("http://www.duowan.com/duowan.js");
+})();*/
+</script>
+        <!--} vip-footer -->
+
+    </div>
+    <script type="text/html" id="tpl-mainslide">
+        <div class="slide__content">
+            <ul data-role="content">
+                {{each list}}
+                    <li class="slide__item">
+                        <a class="slide__item-link" href="{{$value.url}}" target="_blank">
+                            <img src="{{$value.images}}" alt="{{$value.desc}}">
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+             <ul class="ui-switchable-nav">
+                {{each list}}
+                    <li class="ui-switchable-trigger">{{$value.desc}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </script>
+    <script>
+        seajs.config({
+            //alias: {
+            //    "jQuery": "../lib/jquery-1.11.0.js"
+            //}
+            map : [
+                [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140811']
+            ]
+        })
+        seajs.use(['/assets/js/logic/69/index']);
+
+     </script>
+</body>
+</html>

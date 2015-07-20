@@ -1,0 +1,121 @@
+/**
+ * 首页右侧-签到
+ */
+.check-in {
+    background: #fafafa;
+    padding: 20px 15px 10px;
+    margin-bottom: 20px;
+}
+a.check-in__btn {
+    background: #ff9000;
+    color: #fff;
+    display: block;
+    padding: 12px 0;
+    font-size: 20px;
+    font-family: "Microsoft Yahei";
+    margin: 0 0 20px;
+    line-height: 26px; 
+    &:hover {
+            background: #ffa525;
+            text-decoration: none;
+            color: #fff;
+            transition: background .1s ease-out;
+    }   
+    i {
+        display: inline-block;
+        zoom: 1;
+        width: 26px;
+        height: 26px;
+        vertical-align: -5px;
+        *vertical-align: -2px;
+        background:url(../img/icon-3.png) no-repeat;
+        margin: 0 22px 0 30px;
+    }
+}
+
+.task-list {
+    margin-right: -10px;
+    li {
+        float: left;
+        display: inline;
+        margin: 0 10px 0 0;
+        padding-bottom: 10px;
+        height: 90px;
+        width: 60px;
+    }
+}
+.task-list__link {
+    float: left;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background: url(../img/task-list-btn.png) no-repeat;
+    margin: 0 0 30px;
+    i {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        color: #fff;
+        right: -8px;
+        top: -8px;
+        background:url(../img/icon-4.png) no-repeat;
+        z-index: 4;
+        cursor: pointer;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+    &:hover .task-list__mask {
+        transition: opacity .1s ease-out;
+        opacity: 0.2;
+        filter: unquote("alpha(opacity=20)");
+    }
+
+}
+
+.task-list__title {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    bottom: -30px;
+    left: 0;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+.task-list__mask{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 0;
+    background: #fff;
+    opacity: 0;
+    filter: unquote("alpha(opacity=0)");
+    z-index: 2;
+    cursor: pointer;
+}
+
+.task-list__link--01_sign{
+    display:none;
+    background:transparent url(../img/icon-4.png) no-repeat;
+}
+
+.task-list__link--02 {
+    background-position: -60px 0;
+}
+.task-list__link--03 {
+    background-position: -120px 0;
+}
+.task-list__link--04 {
+    background-position: 0 -60px;
+}
+.task-list__link--05 {
+    background-position: -60px -60px;
+}
+.task-list__link--06 {
+    background-position: -120px -60px;
+}

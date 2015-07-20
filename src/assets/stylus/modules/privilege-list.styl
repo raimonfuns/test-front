@@ -1,0 +1,225 @@
+/**
+ * 首页-会员特权,游戏特权列表
+ */
+
+
+.privilege-list {
+	margin-right: -10px;
+	li {
+		float: left;
+		margin: 0 10px 0 0;
+		padding: 0 0 25px;
+		display: inline;
+		p{
+			font-size: 14px;
+			font-family: 'Microsoft Yahei';
+			display: block;
+			padding: 10px 0px;
+			
+		}
+	}
+}
+.privilege-list__item {
+	display: block;
+	height: 117px;
+	width: 117px;
+	text-align: center;
+	position: relative;
+	background: url(../img/privilege-list-01.png) no-repeat 0 -160px;
+
+	&:hover{
+		color: #333;
+		text-decoration: none;
+		.privilege-list__mask {
+			transition: opacity .1s ease-out;
+			zoom:1;
+			opacity: 0.2;
+			filter: unquote("alpha(opacity=20)");
+		}
+	}
+}
+
+.privilege-list__mask {
+	position: absolute;
+	height: 117px;
+	width: 117px;
+	left: 0;
+	top: 0;
+	background: #FFF;
+	z-index: 2;
+	zoom:1;
+	opacity: 0;
+	filter: unquote("alpha(opacity=0)");
+	cursor: pointer;
+}
+
+.privilege-list__item--02 {
+	background-position: -127px -160px;
+}
+.privilege-list__item--03 {
+	background-position: -127px*2 -160px;
+}
+.privilege-list__item--04 {
+	background-position: -127px*3 -160px;
+}
+.privilege-list__tit {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	bottom: -30px;
+	left: 0;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei';
+	cursor: pointer;
+}
+
+
+//游戏特权
+.privilege-list--game {
+	.privilege-list__item {
+		height: 95px;
+		width: 92px;
+		background: url(../img/privilege-list-02.png) no-repeat 0 -135px;
+	}
+	.privilege-list__mask {
+		height: 95px;
+		width: 92px;
+	}
+	.privilege-list__item--02 {
+		background-position: -102px -135px;
+	}
+	.privilege-list__item--03 {
+		background-position: -102px*2 -135px;
+	}
+	.privilege-list__item--04 {
+		background-position: -102px*3 -135px;
+	}
+	.privilege-list__item--05 {
+		background-position: -102px*4 -135px;
+	}
+	.privilege-list__tit {
+		font-size: 12px;
+		font-family: Tahoma, sans-serif;
+	}
+}
+
+
+@media screen and (min-width:1200px) {
+	.privilege-list {
+		margin-right: -13px;
+	}
+	.privilege-list li {
+		margin-right: 13px;
+		padding-bottom: 15px;
+	}
+    .privilege-list__item {
+		height: 160px;
+		width: 160px;
+		background-position: 0 0;
+	}
+	.privilege-list__item--02 {
+		background-position: -173px 0;
+	}
+	.privilege-list__item--03 {
+		background-position: -173px*2 0;
+	}
+	.privilege-list__item--04 {
+		background-position: -173px*3 0;
+	}
+	.privilege-list__tit {
+		bottom: 14px;
+		font-size: 16px;
+	}
+	.privilege-list--game .privilege-list__item {
+		height: 135px;
+		width: 124px;
+		background-position: 0 0;
+	}
+	.privilege-list--game .privilege-list__mask {
+		height: 135px;
+		width: 124px;
+	}
+	.privilege-list--game .privilege-list__tit {
+		bottom: 8px;
+		font-size: 14px;
+	}
+	.privilege-list--game {
+		.privilege-list__item--02 {
+			background-position: -140px 0;
+		}
+		.privilege-list__item--03 {
+			background-position: -140px*2 0;
+		}
+		.privilege-list__item--04 {
+			background-position: -140px*3 0;
+		}
+		.privilege-list__item--05 {
+			background-position: -140px*4 0;
+		}
+		.privilege-list__tit {
+			font-size: 12px;
+			font-family: Tahoma, sans-serif;
+		}
+	}
+}
+
+
+.screen-wide {
+	.privilege-list {
+		margin-right: -13px;
+	}
+	.privilege-list li {
+		margin-right: 13px;
+		padding-bottom: 15px;
+	}
+    .privilege-list__item {
+		height: 160px;
+		width: 160px;
+		background-position: 0 0;
+	}
+	.privilege-list__mask {
+		height: 160px;
+		width: 160px;
+	}
+	.privilege-list__item--02 {
+		background-position: -173px 0;
+	}
+	.privilege-list__item--03 {
+		background-position: -173px*2 0;
+	}
+	.privilege-list__item--04 {
+		background-position: -173px*3 0;
+	}
+	.privilege-list__tit {
+		bottom: 14px;
+		font-size: 16px;
+	}
+	.privilege-list--game .privilege-list__item {
+		height: 135px;
+		width: 124px;
+		background-position: 0 0;
+	}
+	.privilege-list--game .privilege-list__tit {
+		bottom: 8px;
+		font-size: 14px;
+	}
+	.privilege-list--game {
+		.privilege-list__item--02 {
+			background-position: -140px 0;
+		}
+		.privilege-list__item--03 {
+			background-position: -140px*2 0;
+		}
+		.privilege-list__item--04 {
+			background-position: -140px*3 0;
+		}
+		.privilege-list__item--05 {
+			background-position: -140px*4 0;
+		}
+		.privilege-list__tit {
+			font-size: 12px;
+			font-family: Tahoma, sans-serif;
+		}
+	}
+}

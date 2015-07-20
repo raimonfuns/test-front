@@ -1,0 +1,5 @@
+/*! Project: vip
+ *  Version: 1.0.0
+ *  Date: 2015-07-20 02:03:34 PM
+ *  Author: 
+ */define("/assets/js/araleWidget/daparser-debug",["../lib/jquery.min-debug"],function(a,b,c){function d(a){return a.toLowerCase().replace(h,function(a,b){return(b+"").toUpperCase()})}function e(a){for(var b in a)if(a.hasOwnProperty(b)){var c=a[b];if("string"!=typeof c)continue;i.test(c)?(c=c.replace(/'/g,'"'),a[b]=e(j(c))):a[b]=f(c)}return a}function f(a){if("false"===a.toLowerCase())a=!1;else if("true"===a.toLowerCase())a=!0;else if(/\d/.test(a)&&/[^a-z]/i.test(a)){var b=parseFloat(a);b+""===a&&(a=b)}return a}var g=jQuery=a("../lib/jquery.min-debug");b.parseElement=function(a,b){a=g(a)[0];var c={};if(a.dataset)c=g.extend({},a.dataset);else for(var f=a.attributes,h=0,i=f.length;i>h;h++){var j=f[h],k=j.name;0===k.indexOf("data-")&&(k=d(k.substring(5)),c[k]=j.value)}return b===!0?c:e(c)};var h=/-([a-z])/g,i=/^\s*[\[{].*[\]}]\s*$/,j=this.JSON?JSON.parse:g.parseJSON});

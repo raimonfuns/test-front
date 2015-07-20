@@ -1,0 +1,216 @@
+@import "lego/_config";
+@import "lego/_mixins";
+
+@import "modules/logged-in";
+@import "modules/top-num";
+@import "modules/check-in";
+@import "modules/setting-list";
+@import "modules/prizes-list";
+@import "modules/activity-list";
+@import "modules/privilege-list";
+@import "modules/nicecode-nav";
+@import "modules/nicecode-list";
+@import "modules/table-s3";
+
+.yy-main{
+	width:1000px;
+	margin:0 auto;
+	zoom: 1;
+	position: relative;
+}
+
+.wp-col2-main {
+	margin: 0 auto 10px auto;
+	width: 1000px;
+	overflow-x: hidden;
+	.col-main{
+        float: left;
+        margin: 0 20px  0 0;
+        width: 1000px;
+    }
+}
+.blank20{height:20px;}
+
+.text-filter-box{
+	height:70px;	
+}
+#textFilter{
+	width:500px;
+	float:left;	
+	
+	overflow-x:hidden;
+	em,span{
+		font-size:28px;
+		font-family: "Microsoft Yahei";
+		text-align:left;
+		line-height:70px;
+		font-weight:normal;			
+	}
+	em{
+		color:#d6090d;
+	}
+	span{
+		color:#606060;
+	}
+	input{
+		width:220px;
+		border:1px solid #aaaaaa;
+		height:22px;
+	}
+	a{
+		margin-left:4px;
+		font-size:12px;
+	}	
+}
+a.buy-rules{
+	float:right;
+	font-size:12px;
+	line-height:70px;
+	color:#d6090d;
+}
+.filter-list{
+	background:#fafafa;
+	margin-bottom:20px;
+	dt{
+		position:absolute; 
+		line-height:40px; 
+		width:84px; 
+		font-weight:bold; 
+		color:#606060; 
+		text-align:center;
+	}
+	dd{
+		margin:0 15px;
+		padding-left:84px; 
+		line-height:40px; 
+		height:40px;
+		border-bottom:1px dotted #d7d7d7;
+		p{
+			overflow:auto; 
+			zoom:1;
+			height:40px;
+
+			a{
+				color:#333333; float:left; margin:10px 14px 0 0; white-space:nowrap; word-wrap:normal;
+				height:22px;padding:0 10px;
+				line-height:22px;
+				font-size:12px;
+			}
+			a.active{
+				color:#fff; 
+				background-color:#ff9000;
+			}
+		}
+	}
+}
+
+ul.nicecode-list{
+	overflow:hidden;
+	margin-bottom:20px;
+	li{ float:left;
+	    width:150px;
+	    height:100px;
+	    margin: 0 auto;
+	}
+}
+
+#mallTrendAxd{
+	margin-bottom:20px;
+}
+
+.nodata-desc{
+	text-align:center;
+	font-size:14px;
+}
+@import "modules/nicecode-list";
+
+
+.rules-detail{
+	li{line-height:22px;
+		font-size:12px;
+		list-style-type:disc;
+		a{
+			text-decoration:underline;
+		}
+	}
+}
+.nicecode-list__L{
+	height:auto;
+}
+
+.custom-nav{
+	height:62px;
+	li{
+		float:left;		
+		a{
+			display:block;
+			width:120px;
+			height:60px;
+			text-align:center;
+			line-height:60px;
+			color:#333333;
+			font-size:20px;
+	        font-family: "Microsoft Yahei";
+		}
+		a.active{
+			border-top:2px solid #d6090d;
+			background-color:#fafafa;
+		}
+	}
+}
+.custom-search-bar{
+	background-color:#fafafa;
+	padding:0 0;
+
+}
+
+/**custom rule**/
+.custom-rule{
+	li{
+		
+		color:#909090;
+		line-height:24px;
+		font-family: Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+		label{
+			color:#d6090d;
+		}
+	}					
+}
+.custom-search-rule{
+	display:none;
+}
+.box-raider__hd{
+	height:30px;
+	line-height:30px;
+	padding-top:10px;
+}
+
+.top-num__buy{
+	height: 25px;
+	width: 65px;
+	line-height: 25px;
+	float: none;
+	display: inline;
+	padding: 5px 8px;
+}
+
+.table-s3--noborder {
+    td {
+        border: 0px;
+        border-right: 1px solid #f3f3f3;
+        border-bottom: 1px solid #f3f3f3;
+    }
+   
+}
+.table-s3 {
+	margin: 0 0 0px;
+}
+.order-icons {padding-left:18px; background:url(http://dl2.vip.yystatic.com/yyvippicture/b1bc48cf0a73a89f1145573587a384ee.gif) no-repeat 0 -80px;}
+.channelcodei{background-position:0 -54px;}
+.fcheckcodei{background-position:0 -456px;}
+.grandcodei{background-position:0 -895px;}
+.yycodei{background-position:0 -96px;}
+
+em.num__price{
+    font-family: arial;
+ }

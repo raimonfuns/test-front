@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="<%= global.keywords %>">
+    <meta name="description" content="<%= global.description %>">
+    <title><%= global.site_name %></title>
+    <link href="/assets/css/base.css" rel="stylesheet">
+    <link href="/assets/css/nicecode_freecheck.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+</head>
+<body>
+    <div class="wrap index-wrap">
+    
+        <!-- vip-header {-->
+        <% include ../../partial/vip-header %>
+        <!--} vip-header -->
+        <% include ./nav %>
+        <div class="blank20"></div>
+        <div class="yy-main text-filter-box">
+            <h3 id="textFilter"><em>频道</em><span>成长道具</span></h3>
+            <a href="/p/nicecode/rule.html" target="_blank" class="buy-rules" id="buyRules">频道加油卡购买说明>></a>
+        </div>
+        <div class="wp-col2-main clearfix">
+            <div class="col-main">
+            <ul class="custom-nav" id="customNav">
+                <li><a href="javascript:;" data-type="1">自己购买</a></li>
+                <li><a href="javascript:;" data-type="2">代好友购买</a></li>
+                <li><a href="javascript:;" data-type="3">复活频道</a></li>
+            </ul>
+
+            <div class="custom-search-bar clearfix" id="orderlist">
+                
+                <div class="custom-search-rule custom-rule" id="table-1">
+                     <ul class="table-s3" id="codeList">
+                     	 <li class="loading"></li>
+                     </ul>
+                     <h3 class="custom-searc__title">注意：每个考核期结束前15分钟无法购买加油卡</h3>
+                </div>
+                
+                <div class="custom-search-rule custom-rule" id="table-2">
+                	<h3  data-type="errorTip" class="error" style="display: none;"></h3>
+	                
+                    <div  style="clear: both;"></div>
+                    <input type="text" placeholder="请输入短位频道号进行检测" id="searchTxt">
+                    <a href="javascript:;" class="searchBtn" id="buyCheckBtn">检测是否可以购买</a>
+                 
+                    <h3 class="custom-searc__title">注意：每个考核期结束前15分钟无法购买加油卡</h3>
+                    <ul class="table-s3" style="margin-top: 28px;display:none" id="othercodelist">
+                     
+                     </ul>
+                </div>
+                
+                <div class="custom-search-rule custom-rule" id="table-3">
+                   	<h3  data-type="errorTip" class="error"></h3>
+                   	<input type="text" placeholder="输入需要复活的频道长位号" id="searchTxt2">
+                    <a href="javascript:;" class="searchBtn" id="livecheckBtn">复活该频道</a>
+                    <h3 class="custom-searc__title">注意：当前可用复活次数<span id="rebindCountLabel">0</span>次</h3>
+                    
+                    <h4 class="custom-searc__title">复活频道说明：</h3>
+                    
+                    <ul class="custom-search-rule custom-rule" id="rule1" style="display: block;">
+	                    <li><label>1.</label> <a href="http://vip.yy.com/vip/vmall2/owvippay" target="_blank">开通OW会员</a>，会获得1次复活频道的机会，每续费1年获得1次复活资格</li>
+	                    <li><label>2.</label> 复活频道指将已被回收不超过1个月时间的短位频道重新绑定回原频道</li>
+	                    <li><label>3.</label> 请填写需复活频道的长位ID，经检测后符合<a href="/p/nicecode/rule.html" target="_blank">复活规则</a>，即可复活，已开放OW会员可复活自己或他人的任意短位频道号</li>
+                	</ul>
+                </div>
+                
+            </div>
+            <div class="blank20"></div>
+            <div id="pager" class="pagination"></div>
+            </div>
+            
+        </div>
+		
+        <!-- footer-nav {-->
+        <% include ../../partial/footer-nav %>
+        <!--} footer-nav -->
+
+        <!-- vip-footer {-->
+        <% include ../../partial/vip-footer %>
+        <!--} vip-footer -->
+    </div>
+	
+
+	<script id="tplCodeList" type="text/html">
+		{{if datas.length > 0}}
+		 {{each datas as v i}}
+	      
+	      <li style="background:url(/assets/img/jiayou-bg.png) no-repeat; width: 200px;height: 164px;">
+	 		<p class="first">为你的频道<span>{{v.asid}}</span>加油！</p>
+	 		
+	 		{{if v.status != 0}}
+	 			<p>{{v.desc}}</p>
+	 		{{else}}
+	 			<p><span>￥: {{ v.priceString }}元</span></p>
+	 			<p><a href="http://vip.yy.com/vip/vmall2/channeldetailpay?productId={{v.id}}&sid={{v.sid}}&asid={{v.asid}}&payfor=true" target="_blank" class="top-num__buy" data-set-product="{{v.id}}" data-set-sid="{{v.sid}}" data-set-asid="{{v.asid}}" >马上加油</a></p>
+	 		{{/if}}
+	 	 </li>
+	                     	
+	    {{/each}}
+		{{else}}
+			<p class="common-tip">暂时没有发现您有可匹配的频道，可以刷新页面重试或者选择代人买</p>
+		{{/if}}
+	   
+	</script>
+	
+	<script id="tplOthercodelist" type="text/html">
+		{{if datas.length > 0}}
+		 {{each datas as v i}}
+	      
+	      <li style="background:url(/assets/img/jiayou-bg.png) no-repeat; width: 200px;height: 164px;">
+	 		<p class="first">为你的频道<span>{{v.asid}}</span>加油！</p>
+	 		<p><span>￥: {{ v.priceString }}元</span></p>
+	 		<p><a href="http://vip.yy.com/vip/vmall2/channeldetailpay?productId={{v.id}}&sid={{v.sid}}&asid={{v.asid}}&payfor=true" target="_blank" class="top-num__buy" data-set-product="{{v.id}}" data-set-sid="{{v.sid}}" data-set-asid="{{v.asid}}" >马上加油</a></p>
+	 	 </li>
+	                     	
+	    {{/each}}
+		{{else}}
+			
+		{{/if}}
+	   
+	</script>
+
+    <script>
+        seajs.config({
+            //alias: {
+            //    "jQuery": "../lib/jquery-1.11.0.js"
+            //}
+            map : [
+                [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140620']
+            ]
+        })
+        seajs.use(['/assets/js/logic/nicecode/freecheck']);
+
+     </script>
+
+</body>
+</html>

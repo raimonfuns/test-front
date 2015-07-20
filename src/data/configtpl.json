@@ -1,0 +1,20 @@
+{
+    "/p/index.ftl": {
+        "path_to_layout": "src/p/index.html",
+        "path_to_data": [
+            "src/data/release/global.json"
+        ]
+    },
+    "/p/privilege/index.ftl": {
+        "path_to_layout": "src/p/privilege/index.html",
+        "path_to_data": [
+            "src/data/release/global.json"
+        ]
+    },
+    "/p/privilege/introduction.ftl": {
+        "path_to_layout": "src/p/privilege/introduction.html",
+        "path_to_data": [
+            "src/data/release/global.json"
+        ]
+    }
+}

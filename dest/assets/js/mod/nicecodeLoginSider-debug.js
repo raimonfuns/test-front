@@ -1,0 +1,5 @@
+/*! Project: vip
+ *  Version: 1.0.0
+ *  Date: 2015-07-20 02:03:34 PM
+ *  Author: 
+ */define("/assets/js/mod/nicecodeLoginSider-debug",["./login-debug","./date-debug","../lib/jquery.min-debug","../tpl/output/nicecodeLoginSider-debug","../tpl/output/template-debug"],function(a,b,c){var d=a("./login-debug");$("#loginSider").html('<div class="box" style="text-align:center;"><br/><br/><image src="http://dl3.vip.yystatic.com/yyvippicture/0bc6bca0cf7615f8c1d7cfdda5c5f016.gif" src="loading"/><br/><br/><p>努力加载用户信息......</p><br/><br/></div>'),d.getUserInfo(function(b){$("#loginSider").replaceWith(a("../tpl/output/nicecodeLoginSider-debug")(b)),d.getUserLogo(function(a){$("#userAvatar").attr("src",a)}),$("#loggedInRenewClose").on("click",function(){$(this).parent(".logged-in__renew").slideUp("fast")}),d.getUserZZInfo(function(a){var b='<a href="http://vip.yy.com/vip/redirect?src=pay.yyvip" target="_blank"><i class="icon-show-gray"></i></a>';a.data&&a.data.info&&a.data.info.vipUser&&(b='<i class="icon-show-v'+a.data.info.vipGrade+'"></i>'),$("#iconPurple").replaceWith(b)})})});

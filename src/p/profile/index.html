@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="<%= global.keywords %>">
+<meta name="description" content="<%= global.description %>">
+<title><%= global.site_name %></title>
+<link href="/assets/css/base.css" rel="stylesheet">
+<link href="/assets/css/center.css" rel="stylesheet">
+<script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+</head>
+<body>
+	<div class="wrap index-wrap">
+		<!-- vip-header {-->
+		<% include ../../partial/vip-header %>
+		<!--} vip-header -->
+		
+		<div class="wp-main clearfix ">
+			<div class="col-side">
+
+				<div class="side-menu">
+					<ul>
+						<li class="current"><a href="#"><i
+								class="side-menu__icon side-menu__icon--center"></i>个人中心</a></li>
+						<li ><a href="mygift.html"><i class="side-menu__icon side-menu__icon--gift"></i>我的礼包</a></li>
+						<li><a href="myprivilege.html"><i
+								class="side-menu__icon side-menu__icon--privilege"></i>特权设置</a></li>
+						<li><a href="myinfo.html"><i class="side-menu__icon side-menu__icon--msg"></i>我的信息</a></li>
+					</ul>
+				</div>
+				<div style="width:100%; overflow:hidden;" id="weixidoublecode"></div>
+                <div class="user-profile-ad1" id="procductWrap"></div>
+			</div>
+			<div class="col-main">
+				<!-- 个人中心 {-->
+				<div class="box box--big personal-center">
+					<div class="box__bd">
+						<div class="user-profile">
+							<div class="user-profile-login-div"></div>
+							<div class="user-profile-nologin-div">
+								<a href="javascript:;" id="user-profile-nologin"
+									class="table-grow__btn">请先登录</a>
+							</div>
+						</div>
+						<div class="grow-progress">
+							<div class="grow-progress__bar"></div>
+							<div class="grow-progress__value" style="width:0px;"></div>
+							<ul class="grow-progress__list">
+								<li><p class="grow-progress__num">vip1</p><span class="grow-progress__point first"></span><p>0</p></li>
+								<li><p class="grow-progress__num">vip2</p><span class="grow-progress__point"></span><p>600</p></li>
+								<li><p class="grow-progress__num">vip3</p><span class="grow-progress__point"></span><p>1800</p></li>
+								<li><p class="grow-progress__num">vip4</p><span class="grow-progress__point"></span><p>3600</p></li>
+								<li><p class="grow-progress__num">vip5</p><span class="grow-progress__point"></span><p>6000</p></li>
+								<li><p class="grow-progress__num">vip6</p><span class="grow-progress__point"></span><p>10800</p></li>
+								<li><p class="grow-progress__num">vip7</p><span class="grow-progress__point"></span><p>30000</p></li>
+								<li><p class="grow-progress__num">vip8</p><span class="grow-progress__point"></span><p>88888</p></li>
+							</ul>
+							<div class="grow-progress__value_icon grow-privilege-bg">
+								<div class="grow-progress__value_bg grow-privilege-bg">
+									<i><span></span><br/>当前成长</i>
+									<a href="#" class="user-profile-adv" target="_blank"></a>
+								</div>
+							</div>
+						</div>
+						<div class="user-profile__adv1"></div>
+						<div class="user-privilege-wrap">
+							
+						</div>
+						<h4>成长值查询</h4>
+						<div id="growth-table-wrap">
+						<table class="table-s1 table-s1--noborder" id="growth-table">
+							<thead>
+								<tr>
+									<th>成长值方式</th>
+									<th>成长值获得</th>
+									<th>获得时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+						</div>
+						<p class="p-s1">
+							<a href="javascript:;"></a>
+						</p>
+
+
+						<h4>
+							等级与特权<span>想要加速更快?想要红名更威武?</span><em>加油升级吧!</em>
+						</h4>
+
+						<table class="table-s1" id="tb-1vip-privilege">
+							<thead>
+								<tr>
+									<th>特权类型</th>
+									<th>特权名称</th>
+									<th>非会员</th>
+									<th class="highlight">VIP1</th>
+									<th class="highlight">VIP2</th>
+									<th class="highlight">VIP3</th>
+									<th class="highlight">VIP4</th>
+									<th class="highlight">VIP5</th>
+									<th class="highlight">VIP6</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>YY积分</th>
+									<td class="table-s1__name">YY离线积分/月</td>
+									<td rowspan="14">无</td>
+									<td class="highlight">72</td>
+									<td class="highlight">144</td>
+									<td class="highlight">288</td>
+									<td class="highlight">432</td>
+									<td class="highlight">576</td>
+									<td class="highlight">720</td>
+								</tr>
+								<tr>
+									<th rowspan="3">红色昵称</th>
+									<td class="table-s1__name">频道内红色昵称</td>
+									<td>1个频道</td>
+									<td>2个频道</td>
+									<td>3个频道</td>
+									<td>3个频道</td>
+									<td>3个频道</td>
+									<td>全频道</td>
+								</tr>
+								<tr>
+									<td class="table-s1__name">好友列表红色昵称</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<td class="table-s1__name">群内红色昵称</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<th rowspan="3">排名靠前</th>
+									<td class="table-s1__name">频道内排名靠前</td>
+									<td>无</td>
+									<td>无</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<td class="table-s1__name">好友列表排名靠前</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<td class="table-s1__name">群内排名靠前</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<th>会员表情</th>
+									<td class="table-s1__name">频道内会员表情</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<th rowspan="3">会员炫铃</th>
+									<td class="table-s1__name">未读消息铃声</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<td class="table-s1__name">一对一语聊提醒</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<td class="table-s1__name">好友上线提醒</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<th>在线状态特权</th>
+									<td class="table-s1__name">在线对其隐身，隐身对其在线</td>
+									<td>4</td>
+									<td>4</td>
+									<td>5</td>
+									<td>5</td>
+									<td>6</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<th>游戏直播</th>
+									<td class="table-s1__name">房间免排队进入</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+								<tr>
+									<th>音乐视频直播</th>
+									<td class="table-s1__name">房间人数小于500人时免排队进入</td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+									<td><i class="icon-right"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!--} 个人中心 -->
+			</div>
+		</div>
+
+		<!-- footer-nav {-->
+		<% include ../../partial/footer-nav %>
+		<!--} footer-nav -->
+
+		<!-- vip-footer {-->
+		<% include ../../partial/vip-footer %>
+		<!--} vip-footer -->
+
+	</div>
+
+	<script type="text/html" id="user-profile-info">
+        <div class="user-profile__pic">
+            <img src="{{logo}}" alt="">
+        </div>
+        <div class="user-profile__name">
+            {{nick}}
+            <span class="user-profile__yy">YY:{{imid}}</span>
+        </div>
+        <div class="user-profile__level">
+            {{if info!=null && info.vipUser}}
+                <i class="vip-level v{{info.vipLevel}}"></i>{{if info.vipLevel < 8}}<i class="icon-feetype-{{info.feeType}}"></i>{{/if}}
+                <i id="iconPurple"></i>
+            {{else}}
+                <i class="vip-level v1-gray"></i>
+            {{/if}}
+        </div>
+    </script>
+	<script type="text/html" id="user-profile-growth-info">
+    <table class="table-grow" >
+        <tbody>
+            <tr>
+                <td style="border-left-color: #fff;">
+                     <div class="table-grow__item">
+                        <strong class="highlight" id="currGrowthVal">{{score}}</strong>目前成长值
+                    </div>
+                </td>
+                <td>
+                    <div class="table-grow__item">
+                        <strong class="highlight" id="incPerDay">+{{incPerDay}}</strong>每日成长值
+                    </div>
+                </td>
+                <td class="table-grow__vipexpire">
+                    <div class="table-grow__item">
+                        <strong id="vipExpireTime">{{expireTime}}</strong>会员到期
+                        <div class="vipexpire_angle angle4"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="table-grow__item">
+                        <strong><span class="highlight" id="vipNextGrade">{{nextGrade}}</span>天</strong>距离下次升级还有
+                    </div>
+                </td>
+                <td style="border-right-color: #fff;">
+                    <a href="/vip/pay" class="table-grow__btn">{{vipUser?'续费会员':'开通会员'}}</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </script>
+    <!-- 年费特权区间 -->
+    <script type="text/html" id="growth-year">
+    <div class="table-grow__item_vipexpire">
+    <p>年费特权：<strong>{{startDate}}</strong>至<strong>{{endDate}}</strong></p>
+    <div class="vipexpire_line">
+    	<div class="vipexpire_line3"></div>
+    	<div class="vipexpire_line2"></div>
+    	<div class="vipexpire_line1"></div>
+    	<div class="vipexpire_rate"></div>
+    </div>
+    <div>
+    	<span class="vipexpire_angle angle1"></span>
+    	<span class="vipexpire_angle angle2"></span>
+    	<span class="vipexpire_angle angle3"></span>
+    </div>
+    <div>
+    	<span class="vipexpire_year">年费到期</span>
+    	<span class="vipexpire_vip">会员到期</span>
+    </div>
+    </div>
+    </script>
+    <script type="text/html" id="growth-history">
+    {{each historyList as v i}}
+    <tr>
+    	<td>{{v.extRemark}}</td>
+    	<td><em>{{v.newScore - v.oldScore}}</em>点</td>
+    	<td>{{v.updateTime}}</td>
+    </tr>
+    {{/each}}
+    </script>
+    <script type="text/html" id="user-privilege-tpl">
+	    {{if feeType == 1 && vipLevel<7}}
+	    	<h4 class="user-privilege-list">您正在享受VIP6专属特权</h4>
+	    {{else}}
+	    	<h4 class="user-privilege-list">您正在享受VIP{{vipLevel}}专属特权</h4>
+	    {{/if}}
+	    <a href="#" class="user-privilege-adv1 user-profile-adv" target="_blank"></a>
+	    <a href="#tb-1vip-privilege" class="user-privilege-link1">你的全部VIP{{if feeType == 1 && vipLevel<7}}6{{else}}{{vipLevel}}{{/if}}特权</a>
+	    <div class="clearfix"></div>
+	    <ul class="grow-privilege-list">
+	    	<li class="grow-privilege-bg grow-privilege__{{if vipLevel == 8}}v8"><p>V8专属身份图标</p>{{else if vipLevel == 7}}v7"><p>尊贵会员图标</p>{{else if feeType == 1 || vipLevel == 6}}v6"><p>尊贵会员图标</p>{{else}}v{{vipLevel}}"><p>尊贵会员图标</p>{{/if}}
+	        </li>
+	        <li class="grow-privilege-bg grow-privilege__score">
+	        	<p>每月<em>
+	        {{if vipLevel == 8}}
+	            864</em>点离线YY积分</p>
+	        {{else}}
+	            {{if vipLevel == 6 || vipLevel == 7 || feeType == 1}}
+		        	720
+		        {{else if vipLevel == 1}}
+		        	72
+		        {{else if vipLevel == 2}}
+		        	144
+		        {{else if vipLevel == 3}}
+		        	288
+		        {{else if vipLevel == 4}}
+		        	432
+		        {{else if vipLevel == 5}}
+		        	576
+		        {{/if}}
+	        	</em>点离线YY积分</p>
+	        	<a href="http://vip.yy.com/vip/redirect?src=grzx.morejf" target="_blank">领取更多积分</a>
+	        {{/if}}
+	        
+	        </li>
+	        {{if vipLevel == 8}}
+	        <li class="grow-privilege-bg grow-privilege__v8card">
+	        	<p>资料卡身份铭牌</p>
+	        </li>
+	        {{else if vipLevel == 7}}
+	        <li class="grow-privilege-bg grow-privilege__face">
+	        	<p>专属超级表情</p>
+	        </li>
+	        {{else if feeType == 1 || vipLevel == 6}}
+	        <li class="grow-privilege-bg grow-privilege__redname">
+	            <p>全频道红名特权</p>
+	        </li>
+	        {{else}}
+	        	<li class="grow-privilege-bg grow-privilege__redname">
+		        	<p><em>
+		        	{{if vipLevel == 1}}
+		        	1
+		        	{{else if vipLevel == 2}}
+		        	2
+		        	{{else}}
+		        	3
+		        	{{/if}}
+		        	</em>个频道红名特权</p>
+		        	<a href="http://vip.yy.com/vip/redirect?src=grzx.dhhm" target="_blank">兑换全频道红名</a>
+		        </li>
+	        {{/if}}
+	    </ul>
+	    {{if feeType == 1}}
+	    <div class="user-privilege-btn-wrap">
+	         <a class="user-privilege-btn" href="http://hd.vip.yy.com/1504k8/index" target="_blank">围观VIP8顶级特权</a>
+	    </div>
+	    {{else}}
+	    <div class="user-privilege-btn-wrap vip-year">
+	         <a class="user-privilege-btn" href="http://vip.yy.com/vip/vmall2?type=year" target="_blank">升级年费</a>
+	         {{if vipLevel < 6 }}<a href="#tb-1vip-privilege">立享VIP6特权</a>{{/if}}
+	    </div>
+	    {{/if}}
+    </script>
+	<script>
+		seajs.config({
+			//alias: {
+			//    "jQuery": "../lib/jquery-1.11.0.js"
+			//}
+			map : [ [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140620' ] ]
+		})
+		seajs.use([ '/assets/js/logic/profile/index' ]);
+	</script>
+
+</body>
+</html>

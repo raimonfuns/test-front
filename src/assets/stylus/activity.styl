@@ -1,0 +1,53 @@
+@import "lego/_config";
+@import "lego/_mixins";
+ 
+@import "modules/logged-in";
+@import "modules/top-num";
+@import "modules/check-in";
+@import "modules/setting-list";
+@import "modules/prizes-list";
+@import "modules/activity-list";
+@import "modules/privilege-list";
+
+.col-side {
+    //首页左侧广告位
+    .bright-box {
+        margin-bottom: 20px;
+        img {
+            width: 230px;
+        }
+    }
+}
+
+.activity-box {
+    .box__bd{
+        height: 210px;
+        overflow: hidden;
+    }
+}
+
+//活动列表
+.activity-list-box {
+    .pagination {
+        padding-top: 20px;
+    }
+}
+.activity-listloading{
+	height:32px;
+	padding:10px;
+	background:url(/assets/img/ajaxloaderbig.gif) no-repeat center center;
+	display:none;
+}
+
+.slide-s3loading{
+	background:url(/assets/img/ajaxloaderbig.gif) no-repeat center center;
+}
+
+.slide__item{
+	width:730px;
+	height:270px;
+}
+.activity-list__pic{
+	height:150px;
+	width:350px;
+}

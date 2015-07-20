@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <title><%= global.site_name %></title>
+    <link href="/assets/css/base.css" rel="stylesheet">
+    <link href="/assets/css/activity.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+</head>
+<body>
+	<div>
+		<% include ../partial/vip-header %>
+	</div>
+    <div>
+        <h2>freemaker模板</h2>
+    </div>
+    <div>
+         <#list slideContent_json as item>
+                <li class="slide__item"><a class="slide__item-link" href="${item.url}" target="_blank"><img src="${item.images}" alt="${item.desc}"></a></li>
+        </#list>
+    </div>
+</body>
+</html>

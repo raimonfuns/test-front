@@ -1,0 +1,39 @@
+{
+"resources":
+	[
+
+        {"name":"startBtnJson","type":"json","url":"assets/start-btn.json"},
+        {"name":"startBtnImg","type":"image","url":"assets/start-btn.png"},
+        {"name":"startGuysImg","type":"image","url":"assets/start-guys.png"},
+        {"name":"startGuysJson","type":"json","url":"assets/start-guys.json"},
+        {"name":"roleSelectImg","type":"image","url":"assets/role-select.png"},
+        {"name":"superJson","type":"json","url":"assets/super.json"},
+        {"name":"superImg","type":"image","url":"assets/super.png"},
+        {"name":"babyJson","type":"json","url":"assets/baby.json"},
+        {"name":"babyImg","type":"image","url":"assets/baby.png"},
+        {"name":"baobaoJson","type":"json","url":"assets/baobao.json"},
+        {"name":"baobaoImg","type":"image","url":"assets/baobao.png"},
+        {"name":"actionJson","type":"json","url":"assets/action.json"},
+        {"name":"actionImg","type":"image","url":"assets/action.png"},
+
+        {"name":"shareImg","type":"image","url":"assets/share.png"},
+
+        {"name":"startBg","type":"image","url":"assets/start-bg.jpg"},
+        {"name":"gameBg","type":"image","url":"assets/game-bg.jpg"},
+
+        {"name":"ball1","type":"image","url":"assets/ball1.png"},
+        {"name":"ball2","type":"image","url":"assets/ball2.png"},
+        {"name":"ball3","type":"image","url":"assets/ball3.png"},
+        {"name":"cloud1","type":"image","url":"assets/cloud1.png"},
+        {"name":"cloud2","type":"image","url":"assets/cloud2.png"},
+        {"name":"cloud3","type":"image","url":"assets/cloud3.png"},
+
+        {"name":"gameOverBtnImg","type":"image","url":"assets/gameover-btn.png"},
+        {"name":"gameOverBtnJson","type":"json","url":"assets/gameover-btn.json"}
+
+	],
+"groups":
+	[
+        {"name":"preload","keys":"startBtnJson,startBtnImg,startBg,gameBg,startGuysImg,startGuysJson,roleSelectImg,superJson,superImg,babyJson,babyImg,baobaoJson,baobaoImg,actionJson,actionImg,shareImg,ball1,ball2,ball3,cloud1,cloud2,cloud3,gameOverBtnImg,gameOverBtnJson"}
+	]
+}

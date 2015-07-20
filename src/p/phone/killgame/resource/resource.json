@@ -1,0 +1,29 @@
+{
+"resources":
+	[
+		{"name":"gameBg","type":"image","url":"assets/game_bg.jpg"},
+		{"name":"gameCount","type":"image","url":"assets/game_count.png"},
+		{"name":"cow","type":"image","url":"assets/yellow.png"},
+		{"name":"cowJson","type":"json","url":"assets/yellow.json"},
+		{"name":"cowRed","type":"image","url":"assets/red.png"},
+		{"name":"cowRedJson","type":"json","url":"assets/red.json"},
+		{"name":"guy","type":"image","url":"assets/guy.png"},
+		{"name":"guyJson","type":"json","url":"assets/guy.json"},
+		
+		{"name":"shareImg","type":"image","url":"assets/share.png"},
+
+		{"name":"gameOverBtnImg","type":"image","url":"assets/gameover-btn.png"},
+        {"name":"gameOverBtnJson","type":"json","url":"assets/gameover-btn.json"},
+
+        {"name":"gamePreImg","type":"image","url":"assets/game_pre.jpg"},
+        {"name":"gamePreTextImg","type":"image","url":"assets/game_pre_text.jpg"},
+
+        {"name":"bgSp","type":"image","url":"assets/bg-sp.png"},
+        {"name":"bgSpJson","type":"json","url":"assets/bg-sp.json"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"cow,cowJson,cowRed,cowRedJson,guy,guyJson,shareImg,gameOverBtnImg,gameOverBtnJson,gamePreImg,gamePreTextImg,bgSp,bgSpJson,gameBg,gameCount"}
+	]
+}

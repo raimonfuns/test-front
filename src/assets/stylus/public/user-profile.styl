@@ -1,0 +1,266 @@
+/**
+ * 用户个人信息
+ */
+$iconbg = "http://file.do.yy.com/group3/M02/5A/8D/tz0GSFUaP0SAcSI1AAA4rpmAdlA425.png"
+.user-profile {
+	overflow: hidden;
+	zoom: 1;
+}
+.user-profile__pic {
+	float: left;
+	padding: 3px 0 15px 0;
+	a{
+		display:block;
+		width: 60px;
+		height: 60px;
+	}
+	img {
+		width: 60px;
+		height: 60px;
+		border-radius: 6px;
+		overflow: hidden;
+	}
+}
+.user-profile-ad1{
+    height:440px;
+    background-color:#fff;
+}
+.user-profile__name,
+.user-profile__link {
+	height: 22px;
+	line-height: 22px;
+	overflow: hidden;
+	margin: 0 0 0 74px;
+	_margin: 0 0 0 71px;
+	a {
+		margin: 0 3px 0 0;
+		color: #d6090d;
+		font-weight: 700;
+		&:hover {
+			color: #f50a0e;
+			text-decoration: underline;
+		}
+	}
+}
+
+.user-profile__level {
+	margin: 0 0 0 74px;
+	_margin: 0 0 0 71px;
+	
+	i {
+		display: inline-block;
+		zoom:1;
+		height: 16px;
+		margin: 4px 4px 0 0;
+		width: 16px;
+	}
+	.icon-show-gray{
+		cursor:pointer;
+	}
+}
+
+.not-purple-popup{
+	visibility:hidden;
+	position:absolute;
+	left:-10px;
+	top:-2px;
+	padding:10px 10px 10px 10px;
+	border:1px solid #c2c2c2;
+	background:#fff;
+	width:200px;
+	color:#333 !important;
+	text-decoration:none !important;
+	strong{
+		color:#d6090d;
+		font-weight:normal;
+	}
+}
+
+
+.vip-level {
+	background: transparent url($iconbg) no-repeat;
+}
+.v1 {
+	background-position: 0 0;
+}
+.v2 {
+	background-position: -40px 0;
+}
+.v3 {
+	background-position: -80px 0;
+}
+.v4 {
+	background-position: -120px 0;
+}
+.v5 {
+	background-position: -160px 0;
+}
+.v6 {
+	background-position: -200px 0;
+}
+.v7 {
+	background-position: 0 -40px;
+}
+.v8 {
+	background-position: 0 -100px;
+}
+.v1-gray {
+	background-position: -240px 0;
+}
+.v2-gray {
+	background-position: -280px 0;
+}
+.v3-gray {
+	background-position: -320px 0;
+}
+.v4-gray {
+	background-position: -360px 0;
+}
+.v5-gray {
+	background-position: -400px 0;
+}
+.v6-gray {
+	background-position: -440px 0;
+}
+.v7-gray {
+	background-position: 0 -59px;
+}
+.v8-gray {
+	background-position: 0 -120px;
+}
+.icon-vzone {
+	background: transparent url($iconbg) no-repeat -440px -20px;
+}
+.icon-vzone-gray {
+	background: transparent url($iconbg) no-repeat -400px -20px;
+}
+.icon-show {
+	background: transparent url($iconbg) no-repeat -240px -20px;
+}
+.icon-show-gray {
+	background: transparent url($iconbg) no-repeat -280px -20px;
+}
+
+.icon-show {
+	background: transparent url($iconbg) no-repeat -240px -20px;
+}
+.icon-show-v1{
+	background: transparent url($iconbg) no-repeat -159px -40px;
+}
+.icon-show-v2{
+	background: transparent url($iconbg) no-repeat -201px -40px;
+}
+.icon-show-v3{
+	background: transparent url($iconbg) no-repeat -240px -40px;
+}
+.icon-show-v4{
+	background: transparent url($iconbg) no-repeat -280px -40px;
+}
+.icon-show-v5{
+	background: transparent url($iconbg) no-repeat -320px -40px;
+}
+.icon-show-v6{
+	background: transparent url($iconbg) no-repeat -360px -40px;
+}
+.icon-feetype-0 {
+	background: transparent url($iconbg) no-repeat -160px -20px;
+}
+.icon-feetype-0-gray {
+	background: transparent url($iconbg) no-repeat -200px -20px;
+}
+.icon-feetype-1 {
+	background: transparent url($iconbg) no-repeat 0 -20px;
+}
+.icon-feetype-1-gray {
+	background: transparent url($iconbg) no-repeat -40px -20px;
+}
+.icon-feetype-2 {
+	background: transparent url($iconbg) no-repeat -80px -20px;
+}
+.icon-feetype-2-gray {
+	background: transparent url($iconbg) no-repeat -120px -20px;
+}
+
+.icon-month {
+	background: transparent url($iconbg) no-repeat -160px -20px;
+}
+.icon-month-gray {
+	background: transparent url($iconbg) no-repeat -200px -20px;
+}
+.icon-year {
+	background: transparent url($iconbg) no-repeat 0 -20px;
+}
+.icon-year-gray {
+	background: transparent url($iconbg) no-repeat -40px -20px;
+}
+.icon-seasion {
+	background: transparent url($iconbg) no-repeat -80px -20px;
+}
+.icon-seasion-gray {
+	background: transparent url($iconbg) no-repeat -120px -20px;
+}
+
+
+.vip-progress {
+	border-top: 1px dotted #d7d7d7;
+	padding: 6px 0 8px;
+	position:relative;
+}
+.vip-progress__bar {
+	height: 14px;
+	overflow: hidden;
+	background: #e1e1e1;
+	margin: 6px 0;
+	span {
+		display:block;
+		height: 14px;
+		overflow: hidden;
+		width: 0%;
+		background: #d6090d;
+	}
+}
+
+.vip-progress__txt {
+	line-height: 28px;
+	height: 28px;
+	overflow: hidden;
+	a {
+		float: right;
+		color: #d6090d;
+		&:hover {
+			color: #f50a0e;
+			text-decoration: underline;
+		}
+	}
+}
+
+.vip-progress__txt__gray {
+	color: #b3b3b3;
+}
+
+.user-profile-nologin-div{
+	width: 100px;
+	margin: 20px 0;
+	text-align:center;
+	a{
+		margin:0 !important;
+	}
+}
+
+.no-gift-tips{
+	display:none;
+	text-align:center;
+}
+
+a.user-profile-common__btn {
+	    line-height: 20px;
+        display: inline-block;
+		background: #d6090d;
+		color: #fff;
+		padding: 2px 10px;
+        &:hover {
+            background: #f50a0e;
+			color: #fff;
+			text-decoration: none;
+        }
+    }

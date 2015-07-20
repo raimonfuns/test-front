@@ -1,0 +1,19 @@
+<img src="{{v.imgUrl}}" />
+{{if v.productLink}}
+    <a href="{{v.productLink}}" target="_blank" class="statis-a"></a>
+{{else}}
+    <a href="javascript:;"></a>
+{{/if}}
+<p class="welfare-name-wrap"><i class="welfare-name">{{v.productName}}</i></p>
+{{if v.islove}}
+	<div class="heart">
+		<a href="javascript:;" class="active" data-text="&hearts;">&hearts;</a>
+	</div>
+{{else}}
+	<div class="heart">
+		<a href="javascript:;" class="login-btn not-love-a" data-text="&hearts;">&hearts;</a>
+	</div>
+{{/if}}
+{{if v.isNew}}
+    <span class="icon icon-new"></span>
+{{/if}}

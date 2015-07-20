@@ -1,0 +1,38 @@
+{
+	"res":{
+		"state1": {"x":0,"y":0,"w":173,"h":193},
+		"state2": {"x":201,"y":0,"w":173,"h":193},
+		"state3": {"x":403,"y":32,"w":259,"h":150},
+		"state4": {"x":0,"y":228,"w":173,"h":193},
+		"state5": {"x":214,"y":231,"w":184,"h":199},
+		"state6": {"x":433,"y":276,"w":259,"h":150}
+	},
+	"frames": {
+		"run": {
+			"totalFrame": 2,
+			"childrenFrame": [
+				{"res":"state1","x":0,"y":0},
+				{"res":"state2","x":0,"y":0}
+			]
+		},
+		"dead": {
+			"totalFrame": 1,
+			"childrenFrame": [
+				{"res":"state3","x":0,"y":0}
+			]
+		},
+		"r_run": {
+			"totalFrame": 2,
+			"childrenFrame": [
+				{"res":"state4","x":0,"y":0},
+				{"res":"state5","x":0,"y":0}
+			]
+		},
+		"r_dead": {
+			"totalFrame": 1,
+			"childrenFrame": [
+				{"res":"state6","x":0,"y":0}
+			]
+		}
+	}
+}

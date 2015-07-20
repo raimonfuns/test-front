@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="<%= global.keywords %>">
+    <meta name="description" content="<%= global.description %>">
+    <title><%= global.site_name %></title>
+    <link href="/assets/css/base.css" rel="stylesheet">
+    <link href="/assets/css/center.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+</head>
+<body>
+    <div class="wrap index-wrap">
+        <!-- vip-header {-->
+        <% include ../../partial/vip-header %>
+        <!--} vip-header -->
+
+        <div class="wp-main clearfix ">
+            <div class="col-side">
+
+                <div class="side-menu">
+                    <ul>
+                        <li><a href="index.html"><i class="side-menu__icon side-menu__icon--center"></i>个人中心</a></li>
+                        <li class="current"><a href="#"><i class="side-menu__icon side-menu__icon--gift"></i>我的礼包</a></li>
+                        <li><a href="myprivilege.html"><i class="side-menu__icon side-menu__icon--privilege"></i>特权设置</a></li>
+                        <li><a href="myinfo.html"><i class="side-menu__icon side-menu__icon--msg"></i>我的信息</a></li>
+                    </ul>
+                </div>
+
+                <div class="user-profile-ad1">
+                </div>
+
+            </div>
+            <div class="col-main">
+
+                <!-- 我的礼包 {-->
+                <div class="box box--big personal-prizes">
+                    <div class="box__hd">
+                        <h3 class="box__hd__title"><strong>我的</strong>礼包</h3>
+                    </div>
+                    <div class="box__bd">
+
+                        <table class="tb-general tb-general_gift">
+                            <thead>
+                                <tr>
+                                    <th>领取时间</th>
+                                    <th>礼包名称</th>
+                                    <th>详情</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="block-tips no-gift-tips">
+                            <div class="block-tips__text">
+                                暂无领取到礼包
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--} 我的礼包 -->
+            </div>
+        </div>
+
+        <!-- footer-nav {-->
+        <% include ../../partial/footer-nav %>
+        <!--} footer-nav -->
+
+        <!-- vip-footer {-->
+        <% include ../../partial/vip-footer %>
+        <!--} vip-footer -->
+
+    </div>
+    <script type="text/html" id="gift-list">
+    <tbody>
+    {{each data as v i}}
+    <tr class="{{i%2==0?'':'even'}}">
+        <td>{{v.beginTime}}</td>
+        <td>{{v.goodsName}}</td>
+        <td class="tb-genral__code"><span class="tb-general__code__input">到期时间：{{v.endTime}}</span>
+			<a class="tb-general__copy" href="
+			{{if v.goodsStr.indexOf("10") != -1 || v.goodsStr.indexOf("11") != -1}}
+				http://show.vip.yy.com/pay/super/index.html
+			{{else if v.goodsStr.indexOf("1") != -1 || v.goodsStr.indexOf("2") != -1 || v.goodsStr.indexOf("8") != -1}}
+				http://vip.yy.com/p/nicecode/index.html
+			{{else if v.goodsStr.indexOf("9") != -1}}
+				http://show.vip.yy.com/pay/index.html
+			{{/if}}
+			" target="_blank">立即使用</a>
+			
+		</td>
+    </tr>
+    {{/each}}
+    </tbody>
+    </script>
+    <script>
+        seajs.config({
+            //alias: {
+            //    "jQuery": "../lib/jquery-1.11.0.js"
+            //}
+            map : [ [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140620' ] ]
+        })
+        seajs.use([ '/assets/js/logic/profile/mygift' ]);
+    </script>
+</body>
+</html>

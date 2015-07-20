@@ -1,0 +1,13 @@
+{{if result && data != null}}
+    <img class="info-logo" src=""/>
+    <p class="no-wrap {{if data.info.vipUser}}vip-nick{{/if}}" title="{{data.nick}}">{{data.nick}}</>
+    <div>
+        {{if data.info.vipUser}}
+        <span class="icon-lv vip-lv_{{data.info.vipLevel}}"></span><span class="icon-lv vip_{{data.info.feeType}}"></span>
+        {{else}}
+        <span class="icon-lv vip-lv_{{data.info.vipLevel}}-gray"></span><span class="icon-lv vip_{{data.info.feeType}}-gray"></span>
+        {{/if}}
+    </div>
+{{else}}
+    <a href="javascript:;" class="my-login login-btn">我要登录</a>
+{{/if}}

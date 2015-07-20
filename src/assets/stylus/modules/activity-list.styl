@@ -1,0 +1,59 @@
+/**
+ * 活动中心 - 活动列表
+ */
+.activity-list {
+    margin: 0 -30px 0 0;
+    li {
+        float: left;
+        width: 350px;
+        margin: 0 30px 0 0;
+        padding-bottom: 35px;
+        &:hover {
+            .activity-list__link {
+                text-decoration: none;
+                color: #f50a0e;
+            }
+        }
+    }
+}
+.activity-list__pic {
+    position: relative;
+    display:block;
+    margin: 0 0 8px;
+    img {
+        width: 350px;
+        height: 150px;
+    }
+}
+.activity-list__hot {
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color:transparent;
+    background-color:rgba(214,9,13,0.85);
+    filter:unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8d6090d,endColorstr=#d8d6090d)");
+    zoom:1;
+}
+:root .activity-list__hot{filter:none}/*for IE9*/
+.activity-list__link {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Microsoft Yahei";
+    color: #606060;
+    display: block;
+    overflow:hidden;
+    height: 28px;
+    line-height: 28px;
+}
+.activity-list__txt {
+    display:block;
+    overflow:hidden;
+    height: 20px;
+    line-height: 20px;
+    color: #7c7c7c;
+}

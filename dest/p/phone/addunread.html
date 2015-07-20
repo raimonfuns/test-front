@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>变态小头像</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="变态小头像——1秒钟生成微信头像">
+  <meta name="keywords" content="hentai,变态,头像,微信,wechat,头像,红点,角标,强迫症,处女座">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+<style type="text/css">
+  /*! normalize.css v3.0.0 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+</style>
+  <link href="/assets/css/phone_addunread.css" rel="stylesheet">
+  <script type="text/javascript">
+window.shareData = {
+  "imgUrl": "http://dl4.vip.yystatic.com/yyvippicture/8dc4ab3bd5388338e8bc53307afdb0a0.png",
+  "timeLineLink": "http://vip.yy.com/p/phone/addunread.html",
+  "tTitle": "变态小头像!",
+  "tContent": "变态小头像!一秒制作逼死处女座的微信头像！"
+};
+
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+    
+    WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+        WeixinJSBridge.invoke('sendAppMessage', {
+            "img_url": window.shareData.imgUrl,
+            "link": window.shareData.timeLineLink,
+            "desc": window.shareData.tContent,
+            "title": window.shareData.tTitle
+        });
+    });
+
+    WeixinJSBridge.on('menu:share:timeline', function(argv) {
+        WeixinJSBridge.invoke('shareTimeline', {
+            "img_url": window.shareData.imgUrl,
+            "img_width": "640",
+            "img_height": "640",
+            "link": window.shareData.timeLineLink,
+            "desc": window.shareData.tContent,
+            "title": window.shareData.tContent
+        });
+    });
+}, false);  
+  </script>
+</head>
+
+<body>
+  
+<div  style="display:none;"><img src="/assets/img/phone/share-icon.png" alt="wechat share icon"></div>
+
+  <div class="mask" style="display:none;">
+    <div class="mask__tip"></div>
+    <div class="mask__btn"><a class="js-close-mask" href="#">继续秘密制作头像</a></div>
+  </div>
+
+  <div class="main-wrap">
+    <h1>变态小头像</h1>
+    <p class="desc">1秒制作微信头像</p>
+
+    <div class="btn-wrap">
+      <a class="btn">上传头像</a>
+      <div class="ghost"></div>
+    </div>
+    <input class="upload" id="upload" type="file" accept="image/*" capture="camera">
+    <ul>
+      <li class="avatar-wrap avatar-wrap1" id="canvasbox1">
+        <canvas class="canvas" id="canvas1" width=256 height=256></canvas>
+        <img class="icon-img" src="/assets/img/phone/icon-red-1.png" />
+      </li>
+      <li class="avatar-wrap avatar-wrap2" id="canvasbox2">
+        <canvas class="canvas" id="canvas2" width=256 height=256></canvas>
+        <img class="icon-img" src="/assets/img/phone/icon-red-99.png" />
+      </li>
+      <li class="avatar-wrap avatar-wrap3" id="canvasbox3">
+        <canvas class="canvas" id="canvas3" width=256 height=256></canvas>
+        <img class="icon-img" src="/assets/img/phone/icon-red-clean.png" />
+      </li>
+      <li class="avatar-wrap avatar-wrap4" id="canvasbox4">
+        <canvas class="canvas" id="canvas4" width=256 height=256></canvas>
+        <img class="icon-img" src="/assets/img/phone/icon-green-tick.png" />
+      </li>
+      <li class="avatar-wrap avatar-wrap5" id="canvasbox5">
+        <canvas class="canvas" id="canvas5" width=256 height=256></canvas>
+        <img class="icon-img" src="/assets/img/phone/icon-red-ex.png" />
+      </li>
+      <li class="avatar-wrap avatar-wrap6" id="canvasbox6">
+        <canvas class="canvas" id="canvas6" width=256 height=256></canvas>
+        <img class="icon-img" src="/assets/img/phone/icon-verified.png" />
+      </li>
+      <li class="avatar-wrap avatar-wrap7" id="canvasbox7">
+        <canvas class="canvas" id="canvas7" width=256 height=256></canvas>
+        <img class="icon-img" src="/assets/img/phone/icon-play.png" />
+      </li>
+      <li class="avatar-wrap avatar-wrap8"><a class="share-btn js-open-mask" href="#">分享</a>
+      </li>
+    </ul>
+
+  </div>
+  <div class="ft">
+    长按相应图片保存头像
+  </div>
+
+  <script src="./exif.js"></script>
+  <script src="./binaryajax.js"></script>
+  <script src="./phone_addunread_v3.js"></script>
+
+  <script>
+
+  var maskOn  = document.querySelector('.js-open-mask'),
+      maskOff = document.querySelector('.js-close-mask'),
+      mask    = document.querySelector('.mask');
+
+  function openMask(e) {
+    e.preventDefault();
+    
+    mask.style.display = 'block';
+    mask.classList.add('on');
+    document.body.scrollTop = 0;
+    document.title = '变态小头像——1秒钟制作逼死处女座微信头像'; //set share text
+  }
+
+  function closeMask(e) {
+    e.preventDefault();
+
+    mask.style.display = 'none';
+    mask.classList.remove('on');
+  }
+
+  maskOn.addEventListener('click', openMask, false);
+  maskOff.addEventListener('click', closeMask, false);
+
+
+
+     //百度统计
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?9d3f4780e4fa49e46580c81b75f655f9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+
+  </script>
+
+</body>
+
+</html>

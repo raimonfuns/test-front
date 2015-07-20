@@ -1,0 +1,20 @@
+{
+	"res":{
+		"state1": {"x":10,"y":6,"w":239,"h":246},
+		"state2": {"x":323,"y":6,"w":239,"h":234}
+	},
+	"frames": {
+		"run": {
+			"totalFrame": 1,
+			"childrenFrame": [
+				{"res":"state1","x":0,"y":0}
+			]
+		},
+		"dead": {
+			"totalFrame": 1,
+			"childrenFrame": [
+				{"res":"state2","x":0,"y":0}
+			]
+		}
+	}
+}

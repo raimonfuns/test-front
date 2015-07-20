@@ -1,0 +1,96 @@
+/**
+ * 首页-顶配靓号
+ */
+.top-num {
+	overflow: hidden;
+}
+.top-num__item {
+	margin-top: -1px;
+	border-top: 1px dotted #d7d7d7;
+	padding: 6px 0;
+}
+
+
+
+.top-num__t {
+	//@include clearfix;
+	clearfix();
+	line-height: 26px;
+}
+.top-num__buy {
+	float: right;
+	padding: 0 12px;
+	height: 26px;
+	background: #d6090d;
+	color: #fff;
+	&:hover {
+		color: #fff;
+		background: #f50a0e;
+		text-decoration: none;
+	}
+}
+.top-num__num {
+	font-size: 14px;
+	i {
+		display: inline-block;
+		zoom: 1;
+		width: 16px;
+		height: 16px;
+		vertical-align: -2px;
+		*vertical-align: 1px;
+		background:url(../img/icons.png) no-repeat -40px -40px;
+		margin: 0 6px 0 0;
+	}
+}
+.top-num__num--good {
+	i {
+		background:url(../img/icons.png) no-repeat -360px -20px;
+	}
+}
+
+.top-num__b {
+	//@include clearfix;
+	clearfix();
+	line-height: 30px;
+	color: #b1b1b1;
+	span {
+		float: right;
+	}
+	.top-num__price {
+		float: left;
+		color: #d6090d;
+		font-size: 14px;
+		font-family:Arial; 
+	}
+}
+
+.good-num-block {
+	background: url(../img/sprite.png) no-repeat 0 -70px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: center;
+	font-family: 'Microsoft Yahei';
+	margin: 0 -10px;
+}
+
+.top-num-box {
+    .box__bd {
+        padding: 10px;
+    }
+    .box__ft{
+    	padding: 10px;
+    	margin-left:70px;
+    	a {
+			display: inline-block;
+			background: #d6090d;
+			color: #fff;
+			padding: 3px 10px;
+			&:hover {
+				background: #f50a0e;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}

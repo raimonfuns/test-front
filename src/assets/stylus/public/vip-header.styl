@@ -1,0 +1,160 @@
+.vip-header {
+    background: #d6090d;
+}
+.vip-header__inner {
+    margin: 0 auto;
+    width: 1000px;
+    height: 100px;
+}
+.vip-header__logo {
+	float: left;
+	width: 175px;
+	height: 70px;
+	background: url(../img/sprite.png) no-repeat;
+	margin: 12px 30px 0 0;	
+	*margin: 12px 27px 0 0;
+		//yy会员3周年logo更改
+	//width: 225px;
+	//height: 103px;
+	//background: url(http://dl1.vip.yystatic.com/yyvippicture/ff7756dbf0172fc73bdb522a9b1b46e9.png) no-repeat;
+	//margin: 8px 10px 0 0;
+	//*margin: 8px 7px 0 0;
+	a {
+		display:block;
+		height: 100%;
+	}
+}
+
+
+
+
+.vip-header__menu {
+	float: left;
+	margin: 7px 0 0 0;
+	position: relative;
+	overflow: hidden;
+	li {
+		float: left;
+		padding: 36px 0 37px;
+		position: relative;
+	}
+	a {
+		line-height: 20px;
+		padding: 0 12px;
+		color: #fff;
+		font-family: 'Microsoft Yahei';
+		font-size: 16px;
+		border-left: 1px solid #e13337;
+		float:left;
+		margin-left: -1px;
+	}
+	a:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+	.current {
+		background: #fff;
+		z-index: 1;
+		a,
+		a:hover {
+			color: #d6090d;
+			border-right: 1px solid #fff;
+		}
+	}
+	.purple-icon {
+		display: inline-block;
+		zoom: 1;
+		width: 20px;
+		height: 20px;
+		margin: 0 4px 0 0;
+		background: url(../img/icon-1.png) no-repeat;
+		vertical-align: top;
+	}
+	.header-new-icon{
+		position:absolute;
+		margin:-13px 0 0 -30px;
+	}
+}
+
+.vip-header__login {
+	float: right;
+	padding-top: 46px;
+	color: #fff;
+	a {
+		color: #fc0;
+	}
+	a:hover {
+		color: #fc0;
+		text-decoration: underline;
+	}
+	a,span {
+		margin: 0 0 0 4px;
+
+	}
+}
+.vip-header__login__txt{
+	width:120px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	overflow: hidden;
+	word-wrap:normal;//兼容ie文本截断
+}
+
+.vip-header__login__txt,
+.vip-header__login__link {
+	float: left;
+}
+.vip-header__login__link {
+	width: auto;
+}
+
+.vip-header__login__letter{
+	position:relative;display:none;float:left;margin-top:-1px;
+	padding-right: 10px;
+}
+.vip-header__login__letter a i{
+	display:none;
+}
+.vip-header__login__letter.selected a i{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	display:block;
+	background: url(../img/letter_notice.png) no-repeat;
+	right: 5px;
+	top: -2px;
+	z-index: 4;
+	cursor: pointer;
+}
+
+@media screen and (min-width:1200px) {
+	.index-wrap {
+		.vip-header__inner {
+		    width: 1180px;
+		}
+		.vip-header__logo {
+			margin-right: 25px;
+		}
+		.vip-header__menu a {
+			font-size: 16px;
+			padding: 0 25px;
+		}
+	}
+}
+
+
+.screen-wide {
+	.index-wrap {
+		.vip-header__inner {
+		    width: 1180px;
+		}
+		.vip-header__logo {
+			margin-right: 25px;
+		}
+		.vip-header__menu a {
+			font-size: 16px;
+			padding: 0 25px;
+		}
+	}
+}

@@ -1,0 +1,191 @@
+/**
+ * 幻灯片
+ */
+.slide-s1 {
+    position: relative;
+    height: 265px;
+    overflow: hidden;
+    margin: 0 0 20px;
+    .slide__content {
+        height: 265px;
+        width: 500px;
+        overflow: hidden;
+    }
+    .slide__content img {
+        height: 265px;
+        width: 500px;
+    }
+    .ui-switchable-nav{
+        display:none;
+    }
+    .slide__nav,.ui-switchable-nav {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        z-index: 10;
+        overflow: hidden;
+        li {
+            float:left;
+            overflow: hidden;
+            margin-right:1px;
+            height: 24px;
+            margin-top:4px;
+            padding-top:3px;
+            background: #4a4a4a;
+            opacity: 0.7;
+            filter: unquote("alpha(opacity=70)");
+            cursor: pointer;
+            color:#fff;
+            font-size:14px;
+            font-family: "Microsoft Yahei";
+        }
+        .active{
+            border-bottom:2px solid #d6090d;
+            margin-top:0;
+            height:26px;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .slide-s1 {
+        height: 360px;
+        .slide__content {
+            height: 360px;
+            width: 680px;
+            overflow: hidden;
+        }
+        .slide__content img {
+            height: 360px;
+            width: 680px;
+        }
+    }
+}
+
+.screen-wide {
+    .slide-s1 {
+        height: 360px;
+        .slide__content {
+            height: 360px;
+            width: 680px;
+            overflow: hidden;
+        }
+        .slide__content img {
+            height: 360px;
+            width: 680px;
+        }
+    }
+}
+
+
+.screen-wide {
+    .slide-s1 {
+        height: 360px;
+        .slide__content img {
+            height: 360px;
+            width: 680px;
+        }
+    }
+}
+
+
+.slide-s3 {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    margin: 0 0 40px;
+    .slide__content {
+        height: 270px;
+        width: 730px;
+        overflow: hidden;
+    }
+    .slide__content img {
+        height: 270px;
+        width: 730px;
+    }
+    .slide__nav,.ui-switchable-nav {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        z-index: 10;
+        li {
+            float: left;
+            margin: 0 0 0 10px;
+            display: inline;
+            background: #d3d3d3;
+            width: 14px;
+            height: 14px;
+            text-indent: -99em;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .active {
+            background: #d6090d;
+        }
+    }
+}
+
+.slide-s3--min {
+    height: 190px;
+    overflow: hidden;
+    margin: 0 0 20px;
+    .slide__content {
+        height: 290px;
+        width: 230px;
+    }
+    .slide__content img {
+        height: 145px;
+        width: 230px;
+    }
+    .slide__item {
+        width: 230px;
+        height: 290px;
+    }
+    .slide__nav,.ui-switchable-nav {
+        right: 10px;
+        bottom: 10px;
+        li {
+            margin: 0 0 0 10px;
+        }
+        a {
+            width: 10px;
+            height: 10px;
+        }
+        .active {
+            background: #d6090d;
+        }
+    }
+    .slide__prev,
+    .slide__next {
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        opacity: 0.4;
+        filter: unquote("alpha(opacity=40)");
+        z-index: 10;
+        left: 0;
+        top: 124px;
+        text-indent: -99em;
+        overflow: hidden;
+        background:#000 url(../img/icon-11.png) no-repeat 7px 15px;
+    }
+    .slide__next {
+        left: auto;
+        right: 0;
+        background-position: -45px 15px;
+    }
+    .slide__next:hover,
+    .slide__prev:hover {
+        opacity: 0.8;
+        filter: unquote("alpha(opacity=80)");
+    }
+}
+.slide-s4 {
+    position: relative;
+    overflow: hidden;
+ }
+ 
+.slide-s4-min {
+    margin: 0 0 20px;
+}

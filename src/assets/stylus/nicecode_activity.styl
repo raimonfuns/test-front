@@ -1,0 +1,83 @@
+@import "lego/_config";
+@import "lego/_mixins";
+
+@import "modules/logged-in";
+@import "modules/top-num";
+@import "modules/check-in";
+@import "modules/setting-list";
+@import "modules/prizes-list";
+@import "modules/activity-list";
+@import "modules/privilege-list";
+@import "modules/nicecode-nav";
+
+.col-side {
+    //首页左侧广告位
+    .bright-box {
+        margin-bottom: 20px;
+        img {
+            width: 230px;
+        }
+    }
+}
+
+.activity-box {
+    .box__bd{
+        height: 210px;
+        overflow: hidden;
+    }
+}
+
+//今日推荐菜单
+#recommendNav{
+    overflow-x:hidden;
+    width:230px;        
+        a{
+
+           float:left;
+           width:33%;
+           text-align:center;
+           display:block;
+           height:36px; 
+           line-height:36px;
+           border-top:2px solid #fff;
+           font-size:12px;
+           font-family:simsun;
+           background-color:#fff;
+        }
+        a.activity{
+            border-top:2px solid #d6090d;
+            background-color:#fafafa;
+            text-decoration:none;
+        }
+
+}
+
+#niceCodeBox2,#niceCodeBox3{
+    display:none;
+}
+
+.top-num__num i{
+  background:url(http://file.do.yy.com/group3/M00/56/2C/tz0GSFTIhHiAdNDaAAAXFE2gbXM005.png);
+}
+
+.top-num__num i.icon_blank{
+    background-position:-552px -4px;
+}
+
+.top-num__num i.icon_channel{
+    background-position:-501px 0;
+}
+
+.top-num__num i.icon_lover{
+    background-position:-552px -4px;
+}
+
+.top-num__num i.icon_imcode_0{
+    background-position:-552px -4px!important;
+}
+.top-num__num i.icon_imcode_1{
+    background-position:-451px 0!important;
+}
+.top-num__num i.icon_imcode_2{
+    background-position:-451px -30px!important;
+}

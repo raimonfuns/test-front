@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="<%= global.keywords %>">
+    <meta name="description" content="<%= global.description %>">
+    <title><%= global.site_name %></title>
+        <link href="/assets/css/base.css" rel="stylesheet">
+<link href="/assets/css/69.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+
+</head>
+<body>
+    <div class="wrap index-wrap">
+        <!-- vip-header {-->
+        <% include ../../partial/vip-header %>
+        <!--} vip-header -->
+         <div class="container-wrap clearfix">
+        <div class="main-hd clearfix">
+            <a href="yy://pd-[sid=69&subid=2338548249]/[69]" target="_self" class="channel-link">精彩尽在69</a>
+            <ul class="main-nav" id="tabNav">
+                <!-- <li class="active"><a href="#"><span class="nav-left"></span><span class="nav-right">活动集结令</span></a></li>
+                <li><a href="#"><span class="nav-left"></span><span class="nav-right">69招募令</span></a></li> -->
+            </ul>
+        </div>
+        <div class="main-bd clearfix">     
+            <div class="tab-container__bd" id="tabContent">
+                <!-- <img src="http://dl2.vip.yystatic.com/yyvippicture/bbcc1fa52598fd151ae5a21e86edb254.png" /> -->
+            </div>
+        </div>
+        
+        <div class="main-ft clearfix">
+            <h3 class="main-title">69专场</h3>
+            <div class="slide-s3" id="slideS1">
+                                    
+                   
+                </div>
+                <p class="ft-tips">点击图片进入活动专场↑</p>
+        </div>
+    </div>
+
+        <!-- vip-footer {-->
+        <% include ../../partial/vip-footer %>
+        <!--} vip-footer -->
+
+    </div>
+    <script type="text/html" id="tpl-mainslide">
+        <div class="slide__content">
+            <ul data-role="content">
+                {{each list}}
+                    <li class="slide__item">
+                        <a class="slide__item-link" href="{{$value.url}}" target="_blank">
+                            <img src="{{$value.images}}" alt="{{$value.desc}}">
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+             <ul class="ui-switchable-nav">
+                {{each list}}
+                    <li class="ui-switchable-trigger">{{$value.desc}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </script>
+    <script>
+        seajs.config({
+            //alias: {
+            //    "jQuery": "../lib/jquery-1.11.0.js"
+            //}
+            map : [
+                [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140811']
+            ]
+        })
+        seajs.use(['/assets/js/logic/69/index']);
+
+     </script>
+</body>
+</html>

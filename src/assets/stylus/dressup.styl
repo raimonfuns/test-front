@@ -1,0 +1,480 @@
+@import url(./vip.css?20150128);
+.main-body {
+	width:1000px;
+	margin:0 auto 60px;
+	padding-top: 40px;
+}
+.sile-box {
+	width: 230px;
+	float: left;
+}
+.sile-btn-box {
+	a {
+		display: block;
+		width: 230px;
+		height: 45px;
+		background-image: url(../img/dressup/icon.png);
+		background-repeat: no-repeat;
+		text-indent: -100em;
+		overflow: hidden;
+	}
+	.my-dressup {
+		background-position: 0 -146px;
+	}
+	.my-gifts {
+		background-position: 0 -201px;
+		margin-top: 10px;
+	}
+}
+.caption {
+	margin-top: 20px;
+	padding:0 15px;
+	font-family: Microsoft YaHei;
+	dt {
+		font-size: 14px;
+		color: #333;
+		height: 24px;
+		line-height: 24px;
+		font-weight: bold;
+	}
+	dd {
+		margin-top: 10px;
+		color: #909090;
+		line-height: 24px;
+		i {
+			color: #d6090d;
+			font-weight: bold;
+		}
+	}
+}
+.content-box {
+	width: 730px;
+	float: right;
+}
+
+#slideS1{
+	height: 300px;
+	.slide__content {
+		width: 100%;
+		height: 100%;
+		.ui-switchable-content {
+			width: 100%;
+			height: 100%;
+			li {
+				width: 100%;
+				height: 100%;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		
+	}
+	.nav-box {
+		width: 100%;
+	}
+}
+.block {
+	margin-top: 30px
+}
+
+.block-header {
+	height: 36px;
+	line-height: 36px;
+	color: #333;
+	font-size: 22px;
+	font-family: Microsoft YaHei;
+	i {
+		color: #d6090d;
+	}
+}
+.block-body {
+	position: relative;
+}
+.block-fixed {
+
+}
+.block-hidden {
+	width: 740px;
+	margin-left: -5px;
+	overflow: hidden;
+}
+.list-btn {
+	position: absolute;
+	right: 0;
+	top: -20px;
+	li {
+		width: 12px;
+		height: 12px;
+		border-radius:6px;
+		background-color: #e5e5e5;
+		margin-left: 5px;
+		float: left;
+		cursor: pointer;
+	}
+	.curr {
+		background-color: #d6090d
+	}
+}
+.list-box {
+	height:210px;
+	width: 730px;
+	overflow: hidden; 
+	li {
+		width: 730px;
+		padding: 0 5px;
+	}
+}
+.card-box {
+	width: 735px;
+}
+.card {
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/dressup/icon.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 0;
+	float: left;
+	margin-top: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+	img {
+		width: 57px;
+		height: 20px;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -28px;
+		margin-top: -10px;
+	}
+	&:hover {
+		.card-menu {
+			display: block
+		}
+	};
+	.card-bar {
+		margin-top: 72px;
+		*margin-top: 73px;
+		.gift {
+			margin-right: 0
+		}
+		.exchange {
+			margin-left: 0
+		}
+	}
+	
+}
+.new {
+	display: block;
+	width: 46px;
+	height: 24px;
+	background-image: url(../img/dressup/icon.png);
+	background-position: 0 -113px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: -5px;
+	top: 10px
+}
+.price {
+	display: block;
+	height: 18px;
+	width: 52px;
+	background-image: url(../img/dressup/icon.png);
+	background-position: -48px -113px;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	line-height: 18px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-family: sim song
+}
+.list-cards {
+	height:255px;
+	overflow: hidden; 
+	li {
+		width: 730px;
+		padding: 0 5px;
+		float: left;
+	}
+}
+
+.card-goods {
+	width: 240px;
+	height: 120px;
+	float: left;
+	margin-right: 5px;
+	margin-top:5px;
+	position: relative;
+	img {
+		width: 240px;
+		height: 120px;
+	}
+	&:hover {
+		.card-menu {
+			display: block
+		}
+	};
+}
+.card-menu {
+	width: 100%;
+	height: 100%;
+	padding: 1px;
+	border: #ff9000 solid 2px;
+	border-radius:4px;
+	position: absolute;
+	left: -3px;
+	top:-3px;
+	display: none;
+	cursor: pointer;
+}
+
+.card-bar {
+	height: 28px;
+	width: 100%;
+	background-image: url(../img/dressup/pop_bg.png);
+	background-repeat: repeat;
+	margin-top: 92px;
+	*margin-top: 93px;
+	text-align: center;
+	a {
+		display: inline-block;
+		width: 46px;
+		height: 20px;
+		line-height: 20px;
+		color: #fff;
+		margin-top: 4px;
+	}
+	.gift {
+		background-color: #ffb20d;
+		margin-right: 10px;
+		transition:background-color 0.4s;
+		&:hover{
+			color:#fff;
+			text-decoration: none;
+			background-color: #ff7f0d;
+		};
+	}
+	.exchange {
+		background-color: #d6090d;
+		margin-left: 10px;
+		transition:background-color 0.4s;
+		&:hover{
+			color:#fff;
+			text-decoration: none;
+			background-color: #ff0000;
+		};
+	}
+
+}
+.pop-card-loading {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -17px;
+	margin-top: -17px;
+}
+
+.pop-card {
+	width: 283px;
+	height: 378px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 15px #666;
+	z-index: 99;
+}
+
+#pop-dressup {
+	width: 976px;
+	height: 420px;
+	margin-left: -497px;
+	margin-top: -170px;
+	display: none;
+}
+#pop-gifts {
+	width: 727px;
+	height: 420px;
+	margin-left: -363px;
+	margin-top: -170px;
+	display: none;
+}
+.pop-layout {
+	padding: 10px;
+	background-image: url(../img/dressup/filter_bg.png);
+	background-repeat: repeat;
+	position: fixed;
+	left:50%;
+	top: 50%;
+	z-index: 1001;
+}
+.pop-layout-main {
+	padding: 40px 70px 40px 50px;
+	background-color: #fff;
+	position: relative;
+}
+.pop-small {
+	width: 460px;
+}
+.pop-content {
+	padding: 20px 0;
+}
+.close-pop {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-image: url(../img/pop-box__close.png);
+	background-position: 0 0;
+	position: absolute;
+	right: 17px;
+	top: 20px;
+	&:hover{
+		background-position: 0 -25px;
+	}
+}
+
+.pop-btn-box {
+	text-align: center;
+	height: 30px;
+	a {
+		display: inline-block;
+		width: 80px;
+		height: 30px;
+		color:#fff;
+		background-color: #d6090d;
+		line-height: 30px;
+		transition:background-color .4s;
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		};
+	}
+	.pop-yes {
+		&:hover {
+			background-color: #ff0000;
+		};
+	}
+	.pop-no {
+		background-color: #999999;
+		margin-left: 25px;
+		&:hover {
+			background-color: #666;
+		};
+	}
+}
+
+.pop-layout-header {
+	color: #333;
+	font-family: Microsoft YaHei;
+	font-size: 22px;
+	i {
+		color: #d6090d;
+	}
+}
+
+.pop-layout-body {
+	max-height: 286px;
+	margin-top: 10px;
+	overflow-y:auto;
+	overflow-x:hidden;  
+}
+.my-dress-body {
+	width: 700px;
+	text-align: center;
+}
+.my-gifts-body {
+	width: 500px;
+	text-align: center;
+}
+
+.table-list {
+	width: 100%;
+	border-left: #f3f3f3 solid 1px;
+	border-right: #f3f3f3 solid 1px;
+	color: #333;
+	font-size: 14px;
+	th {
+		height: 45px;
+	}
+	td {
+		text-align: center;
+		height: 40px;
+	}
+}
+
+.table-btn {
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	color: #fff;
+	font-size: 12px;
+	/* transition:background-color 0.4s; */
+	&:hover{
+		text-decoration:none;
+		color: #fff;
+	};
+}
+
+.set {
+	width: 50px;
+	background-color: #d6090d;
+	/* &:hover{
+		background-color: #ff0005;
+	}; */
+}
+
+.seted {
+	width: 50px;
+	background-color: #49c029;
+}
+
+.rec {
+	width: 95px;
+	background-color: #999999;
+	margin-left: 12px;
+	/* &:hover{
+		background-color: #777777;
+	}; */
+}
+.send-pid-dl {
+	padding-bottom: 15px;
+	dt {
+		font-size: 14px;
+		color: #333;
+		height: 32px;
+		line-height: 32px;
+		float: left;
+		width: 100px;
+		text-align: center;
+	}
+	dd {
+		float: left;
+		position: relative;
+	}
+}
+.tips-p {
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	color: #d6090d;
+	position: absolute;
+	left: 0;
+	bottom: -28px;
+}
+.send-pid {
+	width: 178px;
+	height: 20px;
+	border: #e6e6e6 solid 1px;
+	padding: 5px 10px;
+	line-height: 20px;
+	color: #333;
+	font-size: 14px;
+}

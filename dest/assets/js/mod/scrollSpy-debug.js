@@ -1,0 +1,5 @@
+/*! Project: vip
+ *  Version: 1.0.0
+ *  Date: 2015-07-20 02:03:34 PM
+ *  Author: 
+ */define("/assets/js/mod/scrollSpy-debug",[],function(a,b,c){var d=function(a){this.$node=$(a).on("click",$.proxy(this.click,this)),this.$anchor=this.$node.find("a"),this.$first=this.$node.find("li:first").addClass("active"),this.$win=$(window).on("scroll",$.proxy(this.spy,this))};d.prototype={constructor:d,nodeTop:function(a){var b=a.attr("href"),c=60;return $(b).offset().top-c},click:function(a){var b=this;"A"==a.target.nodeName&&$("html, body").stop().animate({scrollTop:b.nodeTop($(a.target))},500),a.preventDefault()},spy:function(){for(var a=this,b=this.$win.scrollTop(),c=0,d=this.$anchor.length;d>c;c++){var e=$(this.$anchor[c]),f=a.nodeTop(e);b>f-10&&(this.$anchor.parent().removeClass("active"),e.parent().addClass("active"))}}},c.exports=d});

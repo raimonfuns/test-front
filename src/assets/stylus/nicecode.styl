@@ -1,0 +1,432 @@
+@import "lego/_config";
+@import "lego/_mixins";
+
+@import "modules/logged-in";
+@import "modules/top-num";
+@import "modules/check-in";
+@import "modules/setting-list";
+@import "modules/prizes-list";
+@import "modules/activity-list";
+@import "modules/privilege-list";
+@import "modules/nicecode-nav";
+
+
+.wp-col3-main{
+    margin-bottom:20px;
+}
+
+//nicecodeSider
+a.nicecode-silder-link {
+    color:#333;
+    float:none;
+    &:hover{
+        color:#d6090d;
+    }
+        
+}
+
+//标题
+.mall-trend h4,.evaluate-imid h4,.top-imid h4{
+    color:#333;
+    font-weight:normal;
+    font-size: 14px;
+    font-family: "Microsoft Yahei";
+    line-height: 54px;
+    padding-left:15px;
+}
+
+//slide
+.slide-s3{
+    height:360px;
+    .slide__content{
+        height:360px;
+        img{
+            width:500px!important;
+            height:360px!important;
+        }
+    }
+}
+//layout
+.wp-col2-main {
+    margin: 0 auto 10px auto;
+    width: 1000px;
+    overflow-x:hidden;
+    .col-main{
+        float: left;
+        margin: 0 20px  0 0;
+        width: 750px;
+    }
+}
+
+.nicecode-list{
+    height:199px;
+    overflow:hidden;
+    margin-bottom:20px;
+    .nicecode-list_side{
+        float:left;
+        width:102px;
+        height:199px;
+       
+        background-color:#fafafa;
+        .nicecode-list_icon{
+            width:64px;
+            height:60px;
+            margin:32px auto 0 auto;
+            background:url(http://file.do.yy.com/group3/M00/56/2C/tz0GSFTIhHiAdNDaAAAXFE2gbXM005.png) no-repeat 0 0;
+            text-indent:-99em;
+            overflow:hidden;
+        }
+        h4{
+            font-size: 18px;
+            font-family: "Microsoft Yahei";
+            line-height:58px;
+            height:58px;
+            color:#fff;
+            text-align:center;
+            font-weight:normal;
+        }
+        a{
+            display:block;            
+            width:72px;
+            height:26px;
+            line-height:26px;
+            text-align:center;
+            font-size: 12px;
+            font-family: "simsun";
+            margin:0 auto;
+            background-color:#fff;
+        }
+        i{
+            float:left;
+            color:#f52c22;
+        }
+    }
+    .nicecode-list_main{
+        ul{
+            overflow:hidden;
+            height:199px;
+            li{                
+                float:left;
+                width:163px;
+                height:101px;
+                margin-top:-1px;
+                margin-right:-1px;   
+                a{
+                    border:1px dotted #d7d7d7;
+                     
+                    display:block;
+                    overflow:hidden;
+                    width:161px;
+                    height:99px;  
+                    background-color:#fafafa;
+                    &:hover{
+                        position:absolute;
+                        z-index:2;
+                        background-color:#ffffff;
+                        text-decoration:none;
+                    }
+                    .item-head{
+                        margin-top:14px;
+                        margin-left:20px;
+                        font-size:18px;
+                        font-family:Arial;
+                        line-height:28px;
+                    }
+                    .item-desc{
+                        font-family:simsun;
+                        font-size:12px;
+                        color:#909090;
+                        margin-left:42px;
+                        line-height:20px;
+                        font-family:simsun;
+                    }
+                    .item-desc-money{
+                        font-size:14px;
+                        margin-left:42px;
+                        line-height:20px;
+                        font-family:Arial;
+                    }
+                    h3
+                    {
+                        i{
+                            margin-top:4px;
+                            margin-right:6px;
+                            float:left;
+                            width:16px;
+                            height:16px;                            
+                            background:url(http://file.do.yy.com/group3/M00/56/2C/tz0GSFTIhHiAdNDaAAAXFE2gbXM005.png) no-repeat 0 0;
+                        }
+                        i.icon_blank{
+                            background:url(http://file.do.yy.com/group3/M00/56/2C/tz0GSFTIhHiAdNDaAAAXFE2gbXM005.png) no-repeat -552px -4px;
+                        }
+                        i.icon_thao{
+                            background:url(http://file.do.yy.com/group3/M00/56/2C/tz0GSFTIhHiAdNDaAAAXFE2gbXM005.png) no-repeat -552px -4px;
+                        }
+                        em{
+                            font-weight:normal;
+                        }
+                    }                          
+                }
+                a.btn-change{
+                    font-size:20px;
+                    font-family: "Microsoft Yahei";
+                    line-height:100px;
+                    text-align:center;
+                    &:hover{
+                        text-decoration:underline;
+                    }       
+                }
+            }
+        }
+    }
+}
+@import "modules/nicecode-list";
+.mall-trend{
+    height:360px;
+    background-color:#fafafa;  
+    .mall-trend__top3{
+        height:156px;
+        overflow:hidden;
+
+        li{
+            padding:0 15px;
+            height:34px;
+            margin-bottom:24px;
+            font-family:"Microsoft Yahei";
+            font-size:12.5px;
+            a{
+                &:link,&:visited{
+                    color:#333333;
+                }
+            }
+            i{
+                color:#f52c22;
+                float:left;
+                height:34px;
+                font-weight:normal;
+                font-size: 40px;
+                font-family: "Arial";
+                margin-top:-10px;
+            }
+        }
+    }  
+}
+
+.nicecode-btn {
+    display: inline-block;
+    background: #d6090d;
+    color: #fff;
+    padding: 3px 10px;
+}
+.nicecode-btn:hover {
+    background: #f50a0e;
+    color: #fff;
+    text-decoration: none;
+}
+ 
+.recommend-box { 
+    .box__bd{
+        height: 201px;
+        overflow: hidden;
+    }
+}
+
+.evaluate-imid{
+    background-color:#fafafa;    
+    margin-bottom:20px;
+    #iptEvaluate{
+        width:200px;
+        height:20px;
+        margin:0 auto;       
+        border:1px solid #aaaaaa;
+        display:block;
+    }
+    .nicecode-btn{
+        margin-top:10px;
+        margin:10px auto 40px 86px;
+    }
+}
+
+.top-imid{
+    background-color:#fafafa;   
+}
+
+.top-imid-box{    
+
+    margin:0 auto; 
+    border-bottom:1px dotted #d7d7d7;
+    overflow-x:hidden;
+    width:200px;
+    .top-imid-box__sider{
+        float:left;
+        height:100%;
+        padding:0 10px;
+        width:60px;        
+        font-size: 24px;
+        font-family: "Microsoft Yahei";
+        line-height:30px;
+    }
+    .top-imid-box__main{       
+        li{height:30px;
+            font-size:14px;
+            font-family:Arial;
+        }
+        i{
+            float:left;
+            width:22px;
+            height:20px;
+            background:url(http://file.do.yy.com/group3/M00/56/2C/tz0GSFTIhHiAdNDaAAAXFE2gbXM005.png) no-repeat 0 0;
+            color:#fff;
+            line-height:20px;
+            text-indent:5px;
+            margin:2px 8px 0 0;
+        }
+        em{
+            float:left;
+            width:18px;
+            height:18px;
+            background:url(http://file.do.yy.com/group3/M00/56/2C/tz0GSFTIhHiAdNDaAAAXFE2gbXM005.png) no-repeat 0 0;
+            margin:4px 6px 0 0;
+        }
+    }
+}
+
+.top-imid-box__N{
+    .top-imid-box__sider{
+        color:#f39c12;
+        height:100px;
+        padding-top:12px;
+        height:84px;
+
+    }
+    .top-imid-box__main{
+
+        li{
+            color:#333333;
+            line-height:32px;
+            font-size:14px;
+        }
+        i{
+            margin-top:6px;
+        }
+        em{
+            margin-top:8px;
+        }
+        i.top-num__1{
+            background-position:0 0;
+        }
+        i.top-num__2{
+            background-position:-50px 0;
+        }
+        i.top-num__3{
+            background-position:-100px 0;
+        }
+        em{
+            //background-position:-450px 0;
+            background-position:-451px -30px;
+        }
+    }
+}
+.top-imid-box__C{
+     padding-top:12px;
+    .top-imid-box__sider{
+        color:#9b59b6;
+        padding-top:12px;
+        height:74px;
+    }
+    .top-imid-box__main{
+        i.top-num__1{
+            background-position:-150px 0;
+        }
+        i.top-num__2{
+            background-position:-200px 0;
+        }
+        i.top-num__3{
+            background-position:-250px 0;
+        }
+        em{
+            background-position:-500px 0;
+        }
+    }
+}
+.top-imid-box__L{
+     padding-top:12px;
+     border-bottom:0;
+    .top-imid-box__sider{
+        color:#d50000;
+        padding-top:40px;
+        height:130px;
+    }
+    .top-imid-box__main{
+        
+        li{
+            height:50px;
+        }
+        i{
+            margin-top:12px;
+        }
+        em{
+            margin:10px 0 0 0;
+        }
+        i.top-num__1{
+            background-position:-300px 0;
+        }
+        i.top-num__2{
+            background-position:-350px 0;
+        }
+        i.top-num__3{
+            background-position:-400px 0;
+        }
+         em{
+            background-position:-550px 0;
+            width:28px;
+            height:28px;
+        }
+    }
+}
+
+.consultative-imid{
+    background-color:#fff;
+    margin-top:20px;
+    i.consultative-imid__icon{
+        float: left;
+        margin:0 20px;
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin-top: 4px;
+        background:url(/assets/img/nicecode/bear-pic.png) no-repeat 0 0;
+    }
+    span{
+        font-size: 14px;
+        font-family: "Microsoft Yahei";
+        line-height:20px;
+    }
+    .nicecode-btn{
+        font-size: 14px;
+        margin:8px 0 0 10px;
+          font-family: "Microsoft Yahei";
+    }
+}
+
+
+//靓号评估
+.certificate{
+    background:url("/assets/img/nicecode/dentify.png");
+    position:relative;
+    width: 604px;
+    height: 467px;
+    font-size: 25px;
+    font-family: "Microsoft Yahei";
+    font-weight: bold;
+    color: #3f3f3f;
+}
+.certificate .yy_imid{position: absolute;top:200px;left: 266px;}
+.certificate .grade{position: absolute;top:232px;left: 266px;}
+.certificate .price{position: absolute;top:264px;left: 266px;}
+.certificate .beat{position: absolute;top:318px;left: 401px;}
+
+.ui-dialog-skin-vip .ui-dialog-title{
+    display:block!important;
+}
+

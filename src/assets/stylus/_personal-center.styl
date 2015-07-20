@@ -1,0 +1,487 @@
+/**
+ * 个人中心
+ */
+.personal-center {
+    .grow-privilege-bg{
+        background: transparent url(http://dl3.vip.yystatic.com/yyvippicture/c2204e2ea5a73eef049ea63027f1ac2a.png) no-repeat;
+        display: inline-block;
+        *display:inline;
+        *zoom:1;
+    }
+    .user-profile__name {
+        font-size: 28px;
+        font-family: "Microsoft Yahei";
+        color: #d6090d;
+        height: 30px;;
+        line-height: 30px;
+        padding: 3px 0 10px;
+    }
+    .user-profile__yy {
+        font-size: 12px;
+        color: #999;
+        font-family: arial;
+    }
+
+    .user-profile__level{
+        span{
+            position:relative;
+            top:-3px;
+        }
+        strong{
+            color:#d6090d;
+            font-weight:normal;
+        }
+        a{
+            color:#333 !important;
+            text-decoration:none;
+        }
+    }
+    
+    h4 {
+        font-size: 18px;
+        font-family: "Microsoft Yahei";
+        /*font-weight: 400;*/
+        margin-bottom: 38px;
+        span,
+        em {
+            font-size: 12px;
+            color: #b1b1b1;
+            font-family: arial;
+            margin: 0 0 0 8px;
+        }
+        em {
+            color: #d6090d;
+            margin: 0;
+        }
+    }
+    .table-s1{
+        margin-bottom: 70px;
+    }
+    #growth-table{
+        margin:0;
+    }
+    #growth-table-wrap{
+        overflow:hidden;
+        height:42px;
+    }
+    .p-s1{
+        text-align:center;
+        margin-bottom: 70px;
+        height:22px;
+        a{
+            display:inline-block;
+            width:82px;
+            height:22px;
+            background:url(../img/growth.png) no-repeat;
+        }
+        a.expand{
+            background-position:0 -39px;
+        }
+    }
+    .table-grow {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 30px;
+         td {
+            border: 1px solid #f2f2f2;
+            //border-left-color: #fff;
+            padding: 0 10px;
+        }
+    }
+    .table-grow__item {
+        display: inline-block;
+        zoom: 1;
+        *float: left;
+        padding: 10px 12px;
+        strong {
+            display: block;
+            font-size: 24px;
+        }
+        .highlight {
+            color: #d6090d;
+        }
+    }
+    .table-grow__btn {
+        display: block;
+        padding: 0 10px;
+        line-height: 26px;
+        background: #d6090d;
+        color: #fff;
+        margin: 0 20px;
+        &:hover {
+            color: #fff;
+            background: #f50a0e;
+            text-decoration: none;
+        }
+    }
+    .table-grow__vipexpire{
+        position:relative;
+        z-index:1000;
+        .table-grow__item_vipexpire{
+            display:none;
+            position:absolute;
+            padding:10px;
+            border: 1px solid #eee;
+            background: #fff;
+            z-index: 999;
+            left: -40px;
+            top:85px;
+            font-size:14px;
+            color:#333;
+            font-family:'Microsoft Yahei';
+            text-align:left;
+            div{
+                position:relative;
+                height:15px;
+            }
+            p{
+                word-wrap:normal;
+                white-space:nowrap;
+            }
+            strong{
+                color:#d90000;
+                font-weight:normal;
+            }
+        }
+        .vipexpire_vip{
+            left:195px;
+        }
+        .vipexpire_year{
+            left:140px;
+        }
+        .vipexpire_line{
+            position:relative;
+            height:14px;
+            width:255px;
+            div{
+                top:4px;
+                height:6px;
+                position:absolute;
+            }
+            .vipexpire_line1{
+                background:#d90000;
+            }
+            .vipexpire_line2{
+                background:#ff8b8b;
+                width:230px;
+            }
+            .vipexpire_line3{
+                background:#cacaca;
+                width:100%;
+            }
+            .vipexpire_rate{
+                top:0;
+                width:2px;
+                height:14px;
+                background:#ffc728;
+            }
+        }
+        .vipexpire_angle{
+            background:transparent url(/assets/img/profile-angle.png) no-repeat;
+            display:block;
+            position:absolute;
+            width:6px;
+            height:10px;
+            &.angle1{
+                background-position:-74px -12px;
+                left:227px;
+            }
+            &.angle2{
+                background-position:-43px -12px;
+            }
+            &.angle3{
+                background-position:-59px -12px;
+                left:-3px;
+            }
+            &.angle4{
+                background-position:-25px -16px;
+                width: 7px;
+                height: 6px;
+                margin:5px auto 0 auto;
+                position:relative;
+                display:none;
+            }
+        }
+        .vipexpire_year,.vipexpire_vip{
+            color:#999;
+            position:absolute;
+            font-size:12px;
+            width:50px;
+        }
+    }
+
+    .grow-progress {
+        border-bottom: 1px dotted #dbdbdb;
+        margin-bottom: 20px;
+        width:730px;
+        height:110px;
+        position:relative;
+        color: #7c7c7c;
+        li{
+            position:absolute;
+            &.current{
+                .grow-progress__num{
+                    color: #d6090d;
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+                margin-left:-5px;
+                top:-6px;
+            }
+            &.highlight{
+                .grow-progress__num{
+                    color: #d6090d;
+                }
+            }
+            p,span{
+                display:block;
+            }
+        }
+    }
+    .grow-progress__bar {
+        line-height: 0;
+        font-size: 0;
+        height: 10px;
+        background: #999;
+        border-radius: 6px;
+        margin-bottom: 3px;
+        position: relative;
+        width:730px;
+        position:absolute;
+        left:0px;
+        top:33px;
+        z-index:-1;
+    }
+    .grow-progress__value {
+        position: absolute;
+        left: 0px;
+        top: 33px;
+        font-size: 0;
+        line-height: 0;
+        background: #d6090d;
+        height: 10px;
+        border-radius: 6px 0 0 6px;
+        z-index:-1;
+    }
+    @keyframes progress-glow{
+        0%{box-shadow:0 0 10px 0 #ffdb00}
+        100%{box-shadow:0 0 10px 5px #ffdb00}
+    }
+    @-webkit-keyframes progress-glow{
+        0%{box-shadow:0 0 10px 0 #ffdb00}
+        100%{box-shadow:0 0 10px 5px #ffdb00}
+    }
+    @-moz-keyframes progress-glow{
+        0%{box-shadow:0 0 10px 0 #ffdb00}
+        100%{box-shadow:0 0 10px 5px #ffdb00}
+    }
+    @-o-keyframes progress-glow{
+        0%{box-shadow:0 0 10px 0 #ffdb00}
+        100%{box-shadow:0 0 10px 5px #ffdb00}
+    }
+    .grow-progress__value_icon{
+        background:#ffdb00;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 32px;
+        z-index: 998;
+        animation: progress-glow 1s infinite alternate;
+        -moz-animation: progress-glow 1s infinite alternate;
+        -webkit-animation: progress-glow 1s infinite alternate;
+        -o-animation: progress-glow 1s infinite alternate;
+        .grow-progress__value_bg{
+            display: none;
+            position:absolute;
+            background-position: -15px -443px;
+            width: 166px;
+            height: 82px;
+            left: -39px;
+            top: -75px;
+            color:#fff;
+            text-align: center;
+            font-family: "微软雅黑";
+            i{
+                font-style:noemal;
+                position: absolute;
+                width: 70px;
+                height: 50px;
+                top:5px;
+                left: 0;
+                font-size:12px;
+                span{
+                    font-size: 16px;
+                }
+            }
+            a{
+                position: absolute;
+                width: 80px;
+                height: 50px;
+                color: #fff;
+                top:10px;
+                left: 75px;
+            }
+        }
+    }
+    
+    .grow-progress__point {
+        height: 20px;
+        width: 18px;
+        margin:10px 0;
+        background: url(../img/grow-progress__ball.png) no-repeat;
+    }
+    .first{
+        background:none;
+    }
+    .user-profile-login-div{
+        display:none;
+    }
+
+    .user-profile__adv1{
+        text-align:right;
+        display:block;
+        a {
+            color:#d6090d !important;
+        }
+    }
+    .user-privilege-wrap{
+        display: none;
+        text-align:center;
+        border-bottom: 1px dotted #dbdbdb;
+        padding-bottom:30px;
+        margin-bottom: 20px;
+        h4{
+            float:left;
+        }
+        a{
+            color:#f00;
+            margin-top:7px;
+        }
+        .user-privilege-adv1{
+            float:left;
+            margin-left:10px;
+        }
+        .user-privilege-link1{
+            float:right;
+        }
+        .grow-privilege-list{
+            overflow: hidden;
+            font-family:"微软雅黑";
+            width:750px;
+            margin-left: 15px;
+            li{
+                width: 200px;
+                padding-top: 130px;
+                float:left;
+                margin-right:50px;
+                p{
+                    height:30px;
+                    line-height:30px;
+                    margin-bottom:10px;
+                    font-size:16px;
+                    color:#000;
+                    em{
+                        font-weight:normal;
+                        color:#f00;
+                    }
+                }
+                a{
+                    display: block;
+                    font-size: 14px;
+                    height:40px;
+                    line-height:40px;
+                    background:#d50005;
+                    color:#fff;
+                }
+            }
+        }
+        .grow-privilege__score{
+            background-position: -253px 0;
+        }
+        .grow-privilege__redname{
+            background-position: -505px 0;
+        }
+        .grow-privilege__face{
+            background-position: 0 -233px;
+        }
+        .grow-privilege__v8card{
+            background-position: -254px -233px;
+        }
+        .grow-privilege__v8{
+            background-position: -509px -233px;
+        }
+        .grow-privilege__v1{
+            background-position: 0 -549px;
+        }
+        .grow-privilege__v2{
+            background-position: -253px -549px;
+        }
+        .grow-privilege__v3{
+            background-position: -505px -549px;
+        }
+        .grow-privilege__v4{
+            background-position: 0 -754px;
+        }
+        .grow-privilege__v5{
+            background-position: -253px -754px;
+        }
+        .grow-privilege__v7{
+            background-position: -505px -754px;
+        }
+        .user-privilege-btn-wrap{
+            margin-top: 40px;
+            font-family:"微软雅黑";
+            a{
+                display:block;
+                margin: 0 auto;
+                width: 170px;
+                color: #e47e29;
+                font-size:12px;
+                &.user-privilege-btn{
+                    background:#ffefcd;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size:16px;
+                    margin-bottom:10px;
+                }
+            }
+            &.vip-year{
+                a{
+                    color: #cc0c0c;
+                    &.user-privilege-btn{
+                        background:#ffcdcd;
+                    }
+                }
+            }
+        }
+    }
+}
+.side-privilege_list{
+    li{
+        background: #fff;
+        &.current{
+            background: #Fefdf8;
+            a{
+                color:#d6090d !important;
+                border-left: 5px solid #d6090d;
+            }
+        }
+        a{
+            font-size:14px;
+            border-left: 5px solid #fff;
+            color:#818181 !important;
+            line-height: 36px;
+            height: 36px;
+            padding: 0;
+            text-align: center;
+        }
+    }
+}
+.box__hd__title-link{
+    font-size: 12px;
+    color:#d80a0c;
+    font-family: "宋体";
+    margin-left: 15px;
+}

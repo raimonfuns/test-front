@@ -1,0 +1,131 @@
+<div class="pop-box pop-box--server-list">
+    <div class="pop-box__bd">
+        <div class="server-box">
+            <div class="server-box__hd">
+                <h3>暗黑屠龙服务器</h3>
+            </div>
+            <div class="server-box__bd">
+                <ul class="server-list clearfix">
+                    <% for(var i=0; i<7; i++) { %>
+                        <li><a href="">207双线201服</a><span class="server-list__rec">推荐</span></li>
+                    <% } %>
+                </ul>
+                <div class="server-list__hr"></div>
+                <ul class="server-list clearfix">
+                    <% for(var i=0; i<40; i++) { %>
+                        <li><a href="">207双线201服</a></li>
+                    <% } %>
+                </ul>
+                 <% include ../partial/pagination2 %>
+            </div>
+        </div>
+    </div>
+    <div class="pop-box__ft">
+        <a href="#" class="pop-box__close">关闭</a>
+    </div>
+</div>
+
+<!-- 礼包弹出窗 {-->
+<div class="pop-box pop-box--gift" style="top: 600px;">
+    <div class="pop-box__bd">
+        <div class="gift-box">
+            <div class="gift-box__bd">
+                <h3>三国魂 会员游戏礼包</h3>
+                <div class="gift-list">
+                    <% for(var i=0; i<2; i++) { %>
+                    <div class="gift-list__item">
+                        <div class="gift-list__pic">
+                            <img alrt="" src="http://art.yypm.com/100x100">
+                        </div>
+                        <div class="gift-list__info">
+                            <div class="gift-list__tit">
+                                <h4>尊享礼包</h4>（每个会员账号可领取一次)
+                            </div>
+                            <div class="gift-list__con">
+                                <em>礼包内容</em>
+                                <p>征战令*3、4级丹药箱*1、4级仙果箱*1、兵法残卷*10、洗练石*10兵法残卷*10、洗练石*10</p>
+                            </div>
+                        </div>
+                        <div class="gift-list__btn">
+                            <a href="">点击<br/>领取</a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-box__ft">
+        <a href="#" class="pop-box__close">关闭</a>
+    </div>
+</div>
+<!--} 礼包弹出窗 -->
+
+<!-- 礼包弹出窗，不是会员 {-->
+<div class="pop-box pop-box--gift" style="top: 1050px;">
+    <div class="pop-box__bd">
+        <div class="gift-box">
+            <div class="gift-box__bd">
+                <div class="sys-tips sys-tips--error">
+                    <i></i><span class="sys-tips__txt">对不起，你还不是会员，无法领取游戏礼包，我要<a href="#">开通会员</a>。</span>
+                </div>
+                <h3>三国魂 会员游戏礼包</h3>
+                <div class="gift-list">
+                    <% for(var i=0; i<2; i++) { %>
+                    <div class="gift-list__item">
+                        <div class="gift-list__pic">
+                            <img alrt="" src="http://art.yypm.com/100x100">
+                        </div>
+                        <div class="gift-list__info">
+                            <div class="gift-list__tit">
+                                <h4>尊享礼包</h4>（每个会员账号可领取一次)
+                            </div>
+                            <div class="gift-list__con">
+                                <em>礼包内容</em>
+                                <p>征战令*3、4级丹药箱*1、4级仙果箱*1、兵法残卷*10、洗练石*10兵法残卷*10、洗练石*10</p>
+                            </div>
+                        </div>
+                        <div class="gift-list__btn gift-list__btn--disable">
+                            <a href="">点击<br/>领取</a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="pop-box__ft">
+        <a href="#" class="pop-box__close">关闭</a>
+    </div>
+</div>
+<!--} 礼包弹出窗，不是会员-->
+
+
+<!-- 成功领取 {-->
+<div class="pop-box pop-box--code" style="top: 1550px;">
+    <div class="pop-box__bd">
+        <div class="activation-box">
+            <div class="activation-box__bd">
+                <div class="sys-tips sys-tips--succeed">
+                    <i></i><span class="sys-tips__txt"><strong>成功领取</strong><span class="sys-tips__txt__i">激活码，并已复制到剪切板！</span></span>
+                </div>
+                <div class="activation-box__code">
+                    <span class="disabled">AMVWHAAAEQVALWkJ</span><a href="#">复制</a>
+                </div>
+                <div class="activation-box__enter">
+                    <a href="">进入游戏</a>
+                </div>
+                <div class="activation-box__text">
+                    所有激活码请到<a href="">我的领取记录</a>查找
+                </div>
+            </div>
+            <div class="activation-box__ft">
+                激活步骤：进入游戏，点击图标“礼”，输入卡码后即可领取
+            </div>
+        </div>
+    </div>
+    <div class="pop-box__ft">
+        <a href="#" class="pop-box__close">关闭</a>
+    </div>
+</div>
+<!--} 成功领取 -->

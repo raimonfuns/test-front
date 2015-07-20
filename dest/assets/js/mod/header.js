@@ -1,0 +1,5 @@
+/*! Project: vip
+ *  Version: 1.0.0
+ *  Date: 2015-07-20 02:03:34 PM
+ *  Author: 
+ */define("/assets/js/mod/header",["./login","./date","../lib/jquery.min","./myinfo","./jquery.cookie","../tpl/output/loginHder","../tpl/output/template"],function(a,b,c){function d(a){var b="null";("undefined"==typeof a||null==a)&&(a=window.location.href);var c=/.*\:\/\/([^\/]*).*/,d=a.match(c);return"undefined"!=typeof d&&null!=d&&(b=d[1]),a.substring(a.indexOf(b)+b.length)}function e(a){h=a}$(".vip-header__menu").find("a").each(function(a,b){var c=d();if("/"==$(b).attr("href"))(""==c.substring(1,2)||"?"==c.substring(1,2)||"#"==c.substring(1,2))&&$(b).parent("li").addClass("current");else{if(0==c.indexOf($(b).attr("href")))return $(b).parent("li").addClass("current"),!1;var e=$(b).attr("alllink");if(e)for(var f=e.split("|"),g=0;g<f.length;g++)if(c.indexOf(f[g])>=0)return $(b).parent("li").addClass("current"),!1}});var f=a("./login"),g=a("./myinfo");f.getUserInfo(function(b){$("#loginArea").html(a("../tpl/output/loginHder")(b)),b&&b.result&&(setTimeout(g.startCheck,50),"function"==typeof h&&h())});var h;b.completeHeader=e});

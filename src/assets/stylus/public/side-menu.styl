@@ -1,0 +1,118 @@
+.side-menu {
+    background: #fffaec;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    padding: 20px 0;
+    margin: 0 0 20px;
+    li {
+        display: block;
+        vertical-align: middle;
+        ul.side-menu__sub{display:none;}
+    }
+    li.current{
+        ul.side-menu__sub{display:block;}   
+    }
+    a {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 15px 0;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .current {
+        .side - menu__sub{display:block;}
+        & > a {
+            text-decoration: none;
+            background: #fefdf8;
+            color: #d6090d;
+        }
+        .side-menu__icon--gift {
+            background-position: -41px -81px;
+        }
+        .side-menu__icon--center {
+            background-position: -41px -11px;
+        }
+        .side-menu__icon--privilege {
+            background-position: -41px -152px;
+        }
+        .side-menu__icon--msg {
+            background-position: -41px -220px;
+        }
+        .side-menu__icon--level {
+            background: url(../img/side-menu-icon2.png) no-repeat -34px -4px;
+        }
+        .side-menu__icon--sport {
+            background: url(../img/side-menu-icon2.png) no-repeat -34px -63px;
+        }
+        .side-menu__icon--base {
+            background: url(../img/side-menu-icon2.png) no-repeat -34px -122px;
+        }
+        .side-menu__icon--real {
+            background: url(../img/side-menu-icon2.png) no-repeat -34px -185px;
+        }
+    }
+
+    ul.side-menu__sub {
+        padding: 10px 0;
+        background: #fefefe;
+        a {
+            height: 32px;
+            line-height: 32px;
+            padding: 0;
+            text-indent: 55px;
+            border-left: 5px solid #fefefe;
+            color: #999;
+            font-size: 12px;
+            background: #fefefe;
+        }
+        .current {
+            a {
+                background: #fffdf8;
+                border-color: #d6090d;
+                color: #d6090d;
+            }
+        }
+    }
+}
+.side-menu__icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: -8px;
+    margin: 0 10px 0 18px;
+    background: url(../img/side-menu-icon.png) no-repeat;
+}
+.side-menu__icon--gift {
+    background-position: 2px -81px;
+}
+.side-menu__icon--center {
+    background-position: 2px -11px;
+}
+.side-menu__icon--privilege {
+    background-position: 2px -152px;
+}
+.side-menu__icon--msg {
+    background-position: 2px -220px;
+}
+.side-menu__icon--level {
+    background: url(../img/side-menu-icon2.png) no-repeat 0 -4px;
+}
+.side-menu__icon--sport {
+    background: url(../img/side-menu-icon2.png) no-repeat 0 -63px;
+}
+.side-menu__icon--base {
+    background: url(../img/side-menu-icon2.png) no-repeat 0 -122px;
+}
+.side-menu__icon--real {
+    background: url(../img/side-menu-icon2.png) no-repeat 0 -185px;
+}
+
+.side-menu--submenu {
+    .current a {
+        background: #fffdf8;
+    }
+}
+

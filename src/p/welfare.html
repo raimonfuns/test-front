@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="<%= global.keywords %>">
+    <meta name="description" content="<%= global.description %>">
+    <title><%= global.site_name %></title>
+    <link href="/assets/css/base.css" rel="stylesheet">
+    <link href="/assets/css/welfare.css?v=1" rel="stylesheet">
+    <link href="/assets/css/center.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+</head>
+<body id="page-top">
+    <div class="wrap index-wrap">
+    
+        <!-- vip-header {-->
+        <% include ../partial/vip-header %>
+        <!--} vip-header -->
+
+        <div class="index-main clearfix">
+            
+            <div class="row-head">
+                <div class="welfare-adv">
+                    
+                </div>
+                <div class="welfare-info">
+                    <div class="welfare-p-info">
+                        <p class="loading">
+                            <img src="/assets/img/ajaxloaderbig.gif" width="35" height="35">
+                        </p>
+                    </div>
+                    <hr/>
+                    <div class="welfare-v-info">
+                        <p>V豆余额：<span id="v-left-count">0</span>&nbsp;V豆</p>
+                        <div><a href="javascript:;" class="v-my-gift login-btn">我的礼品</a><a href="javascript:;" class="v-detail login-btn">V豆详情</a></div>
+                    </div>
+                </div>
+            </div>
+            <h3 id="v-exchange">V豆<span>兑换</span></h3>
+            <p class="v-getmorepri">
+            	<a target="_blank" href="http://vip.yy.com/introductionsummary.html">了解更多会员特权</a>
+            </p>
+            <div class="content-wrap v-exchange-time-wrap">
+                <div class="left-side-block"></div>
+                <div class="right-side-block"></div>
+                <p class="loading">
+                    <img src="/assets/img/ajaxloaderbig.gif" width="35" height="35">
+                </p>
+            </div>
+            <div class="content-wrap v-exchange-count-wrap">
+                <div class="left-side-block"></div>
+                <div class="right-side-block"></div>
+                <p class="loading">
+                    <img src="/assets/img/ajaxloaderbig.gif" width="35" height="35">
+                </p>
+            </div>
+            <h3 id="v-roll">V豆<span>抽奖</span></h3>
+            <p class="v-getmorepri">
+            	<a target="_blank" href="http://vip.yy.com/introductionsummary.html">了解更多会员特权</a>
+            </p>
+            <div class="v-roll-wrap">
+                <div class="content-wrap v-roll-area">
+                    <p class="loading">
+                        <img src="/assets/img/ajaxloaderbig.gif" width="35" height="35">
+                    </p>
+                </div>
+                <div class="content-wrap v-lucky-area clearfix">
+                    <h4>每日幸运专区</h4>
+                    <p class="loading">
+                        <img src="/assets/img/ajaxloaderbig.gif" width="35" height="35">
+                    </p>
+                    <table class="lucky-table">
+                        
+                    </table>
+                </div>
+            </div>
+            <h3 id="v-make"><span>赚取</span>V豆</h3>
+            <div class="content-wrap v-make-wrap">
+                <!-- welfare-task {-->
+                <% include ../partial/welfare-task %>
+                 <!-- welfare-task -->
+            </div>
+            <h3>福利社<span>说明</span></h3>
+            <div class="content-wrap">
+                <ul class="intro-list">
+                    <li><p>V豆有效期：单次获得的V豆有效期为60天，超过有效期未被使用的V豆将会失效（获得V豆后的第61天），获得时间较早的V豆会优先使用；会员用户可在V豆有效期内使用V豆兑换、抽取礼品。非会员可在“V豆抽奖”和“每日幸运专区”使用V豆</p>
+                    </li>
+                    <li><p>V豆余额：非会员用户若有V豆余额，每日扣除1V豆。</p>
+                    </li>
+                    <li><p>福利社礼品：</p>
+                    <dt>
+                        <dl>
+                        <p>点击“我的礼品”查看兑换成功或者抽中的礼品，可访问兑换地址并使用礼品兑换码免费购买实物商品（商家若未说明包邮均默认邮费自理）；</p>
+                        </dl>
+                        <dl>
+                        <p>请在兑换码有效期前使用；</p>
+                        </dl>
+                        <dl>
+                        <p>一个礼品兑换码对应一单商品交易（同一件礼品多次成功兑换或者多次抽中，需为每一件支付邮费）；</p>
+                        </dl>
+                        <dl>
+                        <p>若在商品购买过程中遇到问题（例如操作流程，商品质量等问题）请咨询相应商家的客服。</p>
+                        </dl>
+                    </dt>
+                    </li>
+                    <li><p>声明：若有恶意刷取礼品的情况，一经核实官方有权对刷取的兑换码进行回收。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="welfare-nav">
+            <a class="welfare-nav-link" href="http://vip.yy.com/vip/vmall2/vipWelfare1" target="_blank">开通会员</a>
+            <a class="welfare-nav-link" href="javascript:;" data-href="v-exchange">V豆兑换</a>
+            <a class="welfare-nav-link" href="javascript:;" data-href="v-roll">V豆抽奖</a>
+            <a class="welfare-nav-link" href="javascript:;" data-href="v-make">赚取V豆</a>
+            <a class="goto-top" href="javascript:;" data-href="page-top"></a>
+        </div>
+
+        <!-- footer-nav {-->
+        <% include ../partial/footer-nav %>
+        <!--} footer-nav -->
+
+        <!-- vip-footer {-->
+        <% include ../partial/vip-footer %>
+        <!--} vip-footer -->
+    </div>
+    <!-- 幸运专区template -->
+    <script type="text/html" id="tpl-lucky-list">
+    <a class="icon goto-left {{if !lotteryPrizes || lotteryPrizes.length <= 3}}hidden{{/if}}" href="javascript:;"></a>
+    <div class="lucky-list-container">
+        {{if lotteryPrizes && lotteryPrizes.length > 0}}
+            <ul class="welfare-list lucky-list">
+                {{each lotteryPrizes as v i}}
+                    <li data-pid="{{v.productId}}">
+                        <div class="img-container">
+                            <% include ../partial/welfare-prize %>
+                        </div>
+                        <p class="welfare-cost one-row">消耗：<span class="hl">{{v.beanNum}}</span>&nbsp;V豆</p>    
+                        <a class="login-btn welfare-btn" data-lottery="{{i+1}}" data-flag="0" href="javascript:;">试试手气</a>
+                    </li>
+                 {{/each}}
+            </ul>
+        {{else}}
+            <p class="modaa-ctr-notips">暂时没有</p>
+        {{/if}}
+    </div>
+    <a class="icon goto-right {{if !lotteryPrizes || lotteryPrizes.length <= 3}}hidden{{/if}}" href="javascript:;"></a>
+    </script>
+    <!-- 限时领奖template -->
+    <script type="text/html" id="tpl-time-list">
+    <a class="icon goto-left {{if !limitTime || limitTime.length <= 4}}hidden{{/if}}" href="javascript:;"></a>
+    <div class="lucky-list-container time-list-container">
+        {{if limitTime && limitTime.length > 0}}
+            <ul class="welfare-list lucky-list">
+                {{each limitTime as v i}}
+                    <li data-pid="{{v.productId}}" class="welfare-larger-li">
+                        <div class="img-container">
+                           <% include ../partial/welfare-prize %>
+                        </div>
+                        <p class="welfare-cost two-row">需要：<span class="hl">{{v.beanNum}}</span>&nbsp;V豆<br/>
+                        剩余：<span class="welfare-left-time" data-time="{{v.leftTime}}"></span>
+                        </p>
+                        <a class="login-btn welfare-btn" data-flag="1" href="javascript:;">兑换</a>
+                    </li>
+                 {{/each}}
+            </ul>
+        {{else}}
+            <p class="modaa-ctr-notips">暂时没有</p>
+        {{/if}}
+    </div>
+    <a class="icon goto-right {{if !limitTime || limitTime.length <= 4}}hidden{{/if}}" href="javascript:;"></a>
+    </script>
+    <!-- 限量领奖template -->
+    <script type="text/html" id="tpl-count-list">
+    <a class="icon goto-left {{if !limitNum || limitNum.length <= 4}}hidden{{/if}}" href="javascript:;"></a>
+    <div class="lucky-list-container count-list-container">
+        {{if limitNum && limitNum.length > 0}}
+            <ul class="welfare-list lucky-list">
+                {{each limitNum as v i}}
+                    <li data-pid="{{v.productId}}" class="welfare-larger-li">
+                        <div class="img-container">
+                            <% include ../partial/welfare-prize %>
+                            {{if v.leftNum == 0}}
+                             <span class="icon icon-sold"></span>
+                            {{/if}}
+                        </div>
+                        <p class="welfare-cost two-row">需要：<span class="hl">{{v.beanNum}}</span>&nbsp;V豆<br/>
+                        剩余：<span class="welfare-left-num">{{v.leftNum}}</span>份
+                        </p>
+                        {{if v.leftNum <= 0}}
+                            <a class="login-btn welfare-btn welfare-btn-1" data-flag="3" href="javascript:;">要求补货</a>
+                        {{else}}
+                            <a class="login-btn welfare-btn" data-flag="2" href="javascript:;">兑换</a>
+                        {{/if}}
+                       
+                    </li>
+                 {{/each}}
+            </ul>
+        {{else}}
+            <p class="modaa-ctr-notips">暂时没有</p>
+        {{/if}}
+    </div>
+    <a class="icon goto-right {{if !limitNum || limitNum.length <= 4}}hidden{{/if}}" href="javascript:;"></a>
+    </script>
+    <script type="text/html" id="tpl-time-list"></script>
+    <script type="text/html" id="tpl-count-list"></script>
+    <script>
+        seajs.config({
+            //alias: {
+            //    "jQuery": "../lib/jquery-1.11.0.js"
+            //}
+            map : [
+                [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140620']
+            ]
+        })
+        seajs.use(['/assets/js/logic/welfare']);
+
+     </script>
+
+</body>
+</html>

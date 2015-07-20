@@ -1,0 +1,119 @@
+/**
+ * 礼包列表
+ */
+.prizes-list {
+	zoom: 1;
+	overflow: hidden;
+	position: relative;
+	li {
+		zoom: 1;
+		overflow: hidden;
+		margin: 0 0 20px;
+	}
+}
+
+.prizes-list__pic {
+	float: left;
+	margin-right: 15px;
+	display:block;
+	width: 100px;
+	height: 75px;
+	*margin-right: 12px;
+	margin-top: 4px;
+	img {
+		width: 100px;
+		height: 75px;
+	}
+}
+
+.prizes-list__cont {
+	zoom: 1;
+	overflow: hidden;
+	line-height: 20px;
+	h4 {
+		overflow: hidden;
+		height: 20px;
+		font-weight: 400;
+	}
+}
+
+.prizes-list__txt,
+.prizes-list__txt2 {
+	color: #b1b1b1;
+	overflow: hidden;
+	height: 20px;
+	margin-bottom: 12px;
+}
+.prizes-list__txt2 {
+	margin-bottom: 0;
+	color: #d6090d;
+}
+
+.prizes-list__txt__link {
+	float: right;
+	color: #d6090d;
+	&:hover {
+		color: #f50a0e;
+		text-decoration: underline;
+	}
+}
+
+.prizes-list__btn {
+	display: inline-block;
+	background: #d6090d;
+	color: #fff;
+	padding: 3px 10px;
+}
+.prizes-list__btn:hover {
+	background: #f50a0e;
+	color: #fff;
+	text-decoration: none;
+}
+
+/**
+ * 礼包列表（横向）
+ */
+.prizes-list--h {
+	margin-right: -50px;
+	li {
+		float: left;
+		width: 212px;
+		margin: 0 48px 0 0;
+		padding-bottom: 40px;
+		display: inline;
+	}
+}
+
+
+/**
+ * 最近玩过（游戏特权）
+ */
+.min-box {
+	.prizes-list--h {
+		margin-right: -25px;
+		li {
+			margin: 0 25px 0 0;
+			padding-bottom: 34px;
+		}
+	}
+}
+
+/**
+ * 购买礼品（游戏特权）
+ */
+.prizes-list--buy {
+	.prizes-list__pic img {
+		height: 90px;
+	}
+	.prizes-list__txt {
+		margin-bottom: 8px;
+	}
+}
+
+.gift-pack {
+    .box__bd {
+        padding: 0 15px;
+    }
+}
+
+

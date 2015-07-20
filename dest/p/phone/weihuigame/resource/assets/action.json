@@ -1,0 +1,51 @@
+{
+"res":{
+	"state1": {"x":100,"y":12,"w":31,"h":48},
+	"state2": {"x":145,"y":11,"w":31,"h":49},
+	"state3": {"x":9,"y":4,"w":32,"h":56},
+	"state4": {"x":47,"y":4,"w":32,"h":56},
+	"state5": {"x":199,"y":17,"w":30,"h":43},
+	"state6": {"x":242,"y":16,"w":31,"h":44}
+},
+"frames": {
+	"super_run": {
+		"totalFrame": 2,
+		"childrenFrame": [
+			{"res":"state5","x":0,"y":0},
+			{"res":"state6","x":0,"y":0}
+		]
+	},
+	"super_stand":{
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"state5","x":0,"y":0}
+		]
+	},
+	"baby_run": {
+		"totalFrame": 2,
+		"childrenFrame": [
+			{"res":"state3","x":0,"y":0},
+			{"res":"state4","x":0,"y":0}
+		]
+	},
+	"baby_stand":{
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"state3","x":0,"y":0}
+		]
+	},
+	"baobao_run": {
+		"totalFrame": 2,
+		"childrenFrame": [
+			{"res":"state1","x":0,"y":0},
+			{"res":"state2","x":0,"y":0}
+		]
+	},
+	"baobao_stand":{
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"state1","x":0,"y":0}
+		]
+	}
+}
+}

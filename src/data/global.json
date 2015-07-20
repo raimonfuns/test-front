@@ -1,0 +1,13 @@
+{
+	"dataType":"dev",
+	"viphost":"/",
+	"privilegepath":"/p/privilege/introduction.html",
+  	"site_name":"YY会员 - 我是会员 \"V\"力无限",
+    "description":"YY会员为用户提供更加尊贵的服务，这里有动态表情、头像，还能让你在频道树排名靠前；还有尊贵的YY靓号、频道靓号，还有靓、豪图标，为您点亮，彰显身份；频道考核不达标，还有加油卡、复活卡，让你的频道无忧果考核！",
+    "keywords":"皇室,尊贵,个性,成长,等级,特权,功能,YY特权,游戏特权,YYvip,yy vip,YY会员,会员,YY,多玩,duowan",
+    "topNav":{
+    	"index":"/p/index.html",
+    	"privilegepath":"/p/privilege/index.html"
+
+    }
+}

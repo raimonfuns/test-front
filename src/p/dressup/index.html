@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="<%= global.keywords %>">
+    <meta name="description" content="<%= global.description %>">
+    <title><%= global.site_name %></title>
+    <link href="/assets/css/base.css" rel="stylesheet">
+    <link href="/assets/css/dressup.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+
+</head>
+<body>
+    <div class="wrap index-wrap">
+        <!-- vip-header {-->
+        <% include ../../partial/vip-header %>
+        <!--} vip-header -->
+        
+        <div class="main-body clearfix">
+            <div class="sile-box">
+                <div id="loginSider"></div>
+                <div class="sile-btn-box">
+                    <a href="javascript:;" class="my-dressup">我的装扮</a>
+                    <a href="javascript:;" class="my-gifts">我的赠送</a>
+                </div>
+                <dl class="caption">
+                    <dt>装扮素材说明</dt>
+                    <dd>
+                        <ol>
+                            <li><i>1.</i> 所有装扮限会员使用；</li>
+                            <li><i>2.</i> 会员官网装扮说明：免费素材无有效期限制，需用V卡兑换的素材，每兑换一次累计10天有效期（有效期内的素材均可设置使用）；</li>
+                            <li><i>3.</i> YY客户端装扮说明：免费素材不限设置次数，需用V卡兑换的素材，每兑换一次即可长期有效，不限设置次数；</li>
+                            <li><i>4.</i> 赠送给好友后请通知好友到会员装扮站进行装扮设置。</li>
+                        </ol>
+                    </dd>
+                </dl>
+            </div>
+            <div class="content-box">
+                <div class="slide-s1" id="slideS1" >
+                    <div class="slide__content" >
+                        <% if(global.dataType === 'dev'){%>
+                            <ul data-role="content">   
+                                <li class="slide__item"><a  target="_blank" class="slide__item-link" href="#"><img src="http://art.yypm.com/680x320/e8e669" alt="YY会员好友克隆"></a></li>
+                                <li class="slide__item"><a target="_blank"  class="slide__item-link" href="#"><img src="http://art.yypm.com/680x320/74bc45" alt="YY会员好友克隆"></a></li>
+                                <li class="slide__item"><img src="http://art.yypm.com/680x320/e869d8" alt="YY会员好友克隆"></a></li>
+                                <li class="slide__item"><img src="http://art.yypm.com/680x320/e8e669" alt="YY会员好友克隆"></a></li>
+                            </ul>
+                            <ul class="ui-switchable-nav nav-box">
+                                <li class="ui-switchable-trigger">1</li>
+                                <li class="ui-switchable-trigger">2</li>
+                                <li class="ui-switchable-trigger">3</li>
+                                <li class="ui-switchable-trigger">4</li>
+                            </ul>
+                        <%  }else{%>
+                            <ul data-role="content">
+                            <#list slideContent_json as item>
+                                    <li class="slide__item"><a class="slide__item-link" href="${item.url}" target="_blank"><img src="${item.images}" alt="${item.desc}"></a></li>
+                            </#list>
+                             <li class="slide__item hidden" data-edt-pid="1" data-edit-show></li>
+                            </ul>
+                            <ul class="ui-switchable-nav nav-box">
+                                <#list slideContent_json as item>
+                                    <li class="ui-switchable-trigger">${item.desc}</li>
+                                </#list>
+                          
+                            </ul>
+                        <% } %>
+                    </div>
+                </div>
+
+                <div class="block" id="name-plate-box">
+                    <div class="block-header">
+                        <i>会员官网</i>/身份铭牌
+                    </div>
+                    
+                </div>
+
+                <div class="block" id="name-cards-box">
+                    <div class="block-header">
+                        <i>会员官网</i>/个性名片
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+        
+        <!-- footer-nav {-->
+        <% include ../../partial/footer-nav %>
+        <!--} footer-nav -->
+
+        <!-- vip-footer {-->
+        <% include ../../partial/vip-footer %>
+        <!--} vip-footer -->
+
+    </div>
+
+    <% include ./nameplate %>
+    <% include ./namecards %>
+    <script>
+        seajs.config({
+            map : [
+                [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140620']
+            ]
+        })
+        seajs.use(['<%= global.viphost %>assets/js/logic/dressup/index']);
+    </script>
+</body>
+</html>

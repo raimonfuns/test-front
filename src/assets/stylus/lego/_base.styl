@@ -1,0 +1,80 @@
+//
+// $Date: 2014-06-11 09:55:13 +0800 (Wed, 11 Jun 2014) $
+//
+// 优化字体渲染
+// http://www.feeldesignstudio.com/2013/05/text-rendering
+html {
+	text-rendering: optimizelegibility;
+}
+body {
+	word-wrap: break-word;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+i, em {
+	font-style: normal;
+}
+ol, ul, menu {
+	list-style: none outside none;
+}
+fieldset,iframe,abbr,acronym {
+	border: 0 none;
+}
+dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, hr,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0;
+}
+iframe {
+	display: block;
+}
+textarea {
+	resize: vertical;
+}
+// IE bug fixed: th 不继承 text-align
+th {
+    text-align: inherit;
+}
+// 修正表单元素并不继承父级 font 的问题
+body, button, input, select, textarea {
+    font-family: Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+.clearfix{
+	*zoom: 1;
+	&:before,
+	&:after{
+		content: "";
+		display: table;
+		line-height: 0;
+	}
+	&:after{
+		clear: both;
+	}
+}
+// 清除浮动
+//.clearfix {
+//	@extend %clearfix;
+//}
+
+
+html {
+    overflow-y: scroll;
+}
+body {
+    font: 12px/1.5 arial;
+    color: #333;
+    a {
+        text-decoration: none;
+        color: #333;
+        &:hover {
+            color: #f50a0e;
+        }
+    }
+}
+
+input:focus,
+select:focus {
+    outline: 0;
+}

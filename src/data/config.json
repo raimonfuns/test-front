@@ -1,0 +1,128 @@
+{
+    "/p/activity/index.html": {
+        "path_to_layout": "src/p/activity/index.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/activity/finish.html": {
+        "path_to_layout": "src/p/activity/finish.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/index.html": {
+        "path_to_layout": "src/p/index.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/welfare.html": {
+        "path_to_layout": "src/p/welfare.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/profile/index.html": {
+        "path_to_layout": "src/p/profile/index.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/profile/mygift.html": {
+        "path_to_layout": "src/p/profile/mygift.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/profile/myprivilege.html": {
+        "path_to_layout": "src/p/profile/myprivilege.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/profile/myinfo.html": {
+        "path_to_layout": "src/p/profile/myinfo.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/privilege/index.html": {
+        "path_to_layout": "src/p/privilege/index.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/privilege/introduction.html": {
+        "path_to_layout": "src/p/privilege/introduction.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/nicecode/index.html": {
+        "path_to_layout": "src/p/nicecode/index.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+     "/p/nicecode/activity.html": {
+        "path_to_layout": "src/p/nicecode/activity.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/nicecode/activityfin.html": {
+        "path_to_layout": "src/p/nicecode/activityfin.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/nicecode/yy.html": {
+        "path_to_layout": "src/p/nicecode/yy.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/nicecode/customyy.html": {
+        "path_to_layout": "src/p/nicecode/customyy.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/nicecode/mine.html": {
+        "path_to_layout": "src/p/nicecode/mine.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/nicecode/freecheck.html": {
+        "path_to_layout": "src/p/nicecode/freecheck.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+     "/p/nicecode/rule.html": {
+        "path_to_layout": "src/p/nicecode/rule.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+     "/p/69/index.html": {
+        "path_to_layout": "src/p/69/index.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+     "/p/dressup/index.html": {
+        "path_to_layout": "src/p/dressup/index.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    },
+    "/p/test.html": {
+        "path_to_layout": "src/p/test.html",
+        "path_to_data": [
+            "src/data/global.json"
+        ]
+    }
+}

@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="<%= global.keywords %>">
+    <meta name="description" content="<%= global.description %>">
+    <title><%= global.site_name %></title>
+    <link href="/assets/css/base.css" rel="stylesheet">
+    <link href="/assets/css/nicecode.css?20150128" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+</head>
+<body>
+    <div class="wrap index-wrap">
+    
+        <!-- vip-header {-->
+        <% include ../../partial/vip-header %>
+        <!--} vip-header -->
+        <% include ./nav %>
+        <div class="wp-col3-main clearfix">
+            <div class="col-side">
+                <div id="loginSider"></div>
+            </div>
+            <div class="col-main">
+
+                <div class="slide-s3" id="slideS1" ></div>
+            </div>
+            <div class="col-side">
+                <!-- 商城动态 {-->
+                <div class="mall-trend">
+                <h4>商城动态</h4>
+                <ul class="mall-trend__top3 clearfix" id="mallTrendTop"></ul>
+                <div id="mallTrendAxd"></div>
+                </div>
+                <!-- }商城动态 -->
+            </div>
+        </div>
+
+        <div class="wp-col2-main clearfix">
+            <div class="col-main">
+                <div class="nicecode-list nicecode-list__N">
+                    <div class="nicecode-list_side">
+                        <p class="nicecode-list_icon">[N]</p>
+                        <h4>单号靓号</h4>
+                        <a href="/p/nicecode/yy.html?type=1">查看更多</a>
+                    </div>
+                     <div class="nicecode-list_main">
+                        <ul id="imListBox"><li class="loading"></li></ul>
+                     </div>
+                </div>
+                <div class="nicecode-list nicecode-list__C clearfix">
+                    <div class="nicecode-list_side">
+                        <p class="nicecode-list_icon">[C]</p>
+                        <h4>频道靓号</h4>
+                        <a href="/p/nicecode/yy.html?type=3">查看更多</a>
+                    </div>
+                     <div class="nicecode-list_main">
+                        <ul id="chListBox"><li class="loading"></li></ul>
+                     </div>
+                </div>
+                <div class="nicecode-list nicecode-list__L clearfix">
+                    <div class="nicecode-list_side">
+                    <p class="nicecode-list_icon">[<i class="icon-heart"></i>]</p>
+                        <h4>情侣靓号</h4>
+                        <a href="/p/nicecode/yy.html?type=2">查看更多</a>
+                    </div>
+                     <div class="nicecode-list_main">
+                      <ul id="loversListBox"><li class="loading"></li></ul>
+                     </div>
+                </div>
+            </div>
+            <div class="col-side">
+                <!-- YY靓号评估 {-->
+                <div class="evaluate-imid">
+                    <h4>YY靓号评估</h4>
+                    <input type="text" placeholder="输入需要评估的YY号" id="iptEvaluate">
+                    <a href="javascript:;" class="nicecode-btn" id="btnEvaluate">评估</a>
+                </div>
+                <!-- }YY靓号评估 -->
+                <!-- 靓号排行榜 {-->
+                <div class="top-imid">
+                    <h4>靓号排行榜</h4>
+                    <div class="top-imid-box top-imid-box__N">
+                        <div class="top-imid-box__sider ">
+                        单号靓号
+                        </div>
+                        <div class="top-imid-box__main">
+                            <ul id="topImList"><li class="loading"></li></ul>
+                        </div>
+                    </div>
+
+                     <div class="top-imid-box top-imid-box__C">
+                        <div class="top-imid-box__sider">
+                            频道靓号
+                        </div>
+                        <div class="top-imid-box__main">
+                            <ul id="topChList"><li class="loading"></li></ul>
+                        </div>
+                    </div>
+                    
+                    <div class="top-imid-box top-imid-box__L">
+                        <div class="top-imid-box__sider">
+                            情侣靓号
+                        </div>
+                        <div class="top-imid-box__main">
+                            <ul id="toploversListBox"><li class="loading"></li></ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- }靓号排行榜 -->
+                <!-- 靓号咨询 {-->
+                <div class="consultative-imid">
+                    <i class="consultative-imid__icon"></i>
+                    <span>靓号咨询80030</span>
+                    <p>反馈建议</p>
+                </div>
+                <!-- }靓号咨询 -->
+
+            </div>
+        </div>
+
+        <!-- footer-nav {-->
+        <% include ../../partial/footer-nav %>
+        <!--} footer-nav -->
+
+        <!-- vip-footer {-->
+        <% include ../../partial/vip-footer %>
+        <!--} vip-footer -->
+    </div>
+
+<!-- 轮播图 -->
+<script type="text/html" id="tpl-mainslide">
+    <div class="slide__content">
+        <ul data-role="content">
+            {{each list}}
+                <li class="slide__item">
+                    <a class="slide__item-link" href="{{$value.url}}">
+                        <img src="{{$value.images}}" alt="{{$value.desc}}">
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+         <ul class="ui-switchable-nav">
+            {{each list}}
+                <li class="ui-switchable-trigger">{{$value.desc}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+
+<!-- ＹＹ靓号 -->
+<script id="tpl_ImList" type="text/html">
+    {{each yyImList as v i}}
+        <li>
+            <a href="http://vip.yy.com/vip/vmall2/detailpay?productId={{v.id}}" target="_blank">  
+            <h3 class="item-head"><i class="icon_imcode_{{v.mt}}"></i> {{#v.highlightKey}}</h3>
+            <p class="item-desc">送{{v.membTimePrize}}天YY会员 </p>
+            <p class="item-desc-money">¥{{v.price}}元</p>
+            </a>
+        </li>   
+    {{/each}}
+    <li><a href="javascript:;" class="btn-change">换一批&gt;&gt;</a></li>
+</script>
+
+<!-- 频道靓号 -->
+<script id="tpl_ChList" type="text/html">
+    {{each channelIdList as v i}}
+        <li>
+            <a href="http://vip.yy.com/vip/vmall2/detailpay?productId={{v.id}}" target="_blank"> 
+            <h3 class="item-head"><i class="icon_nicecode"></i> {{#v.highlightKey}}</h3>
+            <p class="item-desc">送3张加油金卡</p>
+            <p class="item-desc-money">¥{{v.price}}元</p>
+            </a>
+        </li> 
+  
+    {{/each}}
+    <li><a href="javascript:;" class="btn-change">换一批&gt;&gt;</a></li>
+</script>
+
+<!-- 情侣靓号 -->
+<script id="tpl_LoversList" type="text/html">
+    {{each loversImList as v i}}
+         <li>
+         <a href="http://vip.yy.com/vip/vmall2/detailpay?productId={{v.id}}" target="_blank">
+         <h3 class="item-head item-love"><i class="icon_nicecode icon_lover"></i>{{#v.m_highlightKey}} <br /> {{#v.s_highlightKey}}</h3>  
+         <p class="item-desc">分别送{{v.membTimePrize}}天YY会员 </p>
+         <p class="item-desc-money">¥{{v.price}}元</p>
+         </a></li>         
+    {{/each}}
+    <li><a href="javascript:;" class="btn-change">换一批&gt;&gt;</a></li>
+</script>
+
+<script>
+    seajs.config({
+        //alias: {
+        //    "jQuery": "../lib/jquery-1.11.0.js"
+        //}
+        map : [
+            [ /^(.*\.(?:js))(.*)$/i, '$1?_=20150128']
+        ]
+    })
+    seajs.use(['/assets/js/logic/nicecode/index']);
+
+</script>
+
+</body>
+</html>

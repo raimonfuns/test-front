@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="<%= global.keywords %>">
+    <meta name="description" content="<%= global.description %>">
+    <title><%= global.site_name %></title>
+    <link href="<%= global.viphost %>assets/css/base.css" rel="stylesheet">
+    <link href="<%= global.viphost %>assets/css/vip.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+    <style type="text/css">
+    .fixed {position: fixed;top: 10px;}
+    .content_box{width:738px; float:left; border:1px solid #e1dfdf;padding-left:10px; padding-top:10px; }
+    .tequan_intro_title{height:32px; margin-bottom:30px;}
+    .tequan_text_top{display:block; padding-left:25px;}
+    .tequan_text_top01{display:block; padding-left:25px; line-height:22px;}
+    .game_gift_box{display:block; padding-left:25px;}
+    .game_gift_box ul li{width:600px; float:left; line-height:22px;}
+    .game_gift_box .jiazhi_text{float:right; padding-right:250px;}        
+    .intro_sep_div{font-size:16px; height:32px; line-height:32px; padding-left:10px; font-family:"Microsoft Yahei","SimHei" !important; background-color:#D9D9D9;}
+    .index-wrap .box--big{margin:0;}
+    </style>
+</head>
+<body>
+    <div class="wrap index-wrap">
+        <!-- vip-header {-->
+        <% include ../../partial/vip-header %>
+        <!--} vip-header -->
+
+        <div class="wp-main clearfix">
+            <div class="col-side">
+
+                <div class="side-menu side-menu--submenu">
+                    <ul id="privNav">
+                        <li><a href="javascript:;"><i class="side-menu__icon side-menu__icon--level"></i>等级特权</a> <ul class="side-menu__sub"></ul></li>
+                        <li>
+                            <a href="javascript:;"><i class="side-menu__icon side-menu__icon--sport"></i>炫耀特权</a>
+                            <ul class="side-menu__sub">                                
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;"><i class="side-menu__icon side-menu__icon--base"></i>基础特权</a><ul class="side-menu__sub"></ul></li>
+                        <li><a href="javascript:;"><i class="side-menu__icon side-menu__icon--real"></i>实用特权</a><ul class="side-menu__sub"></ul></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-main">
+
+
+                <div class="box box--big content-box">
+   
+                    <div class="box__bd" id="aboutcontent">
+                            
+                            <% if(global.dataType === 'dev'){%>
+                                <% include detail %>
+                            <%  }else{%>
+                                <@nestedParse>
+                                     ${introduction2_content}
+                                </@nestedParse>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer-nav {-->
+        <% include ../../partial/footer-nav %>
+        <!--} footer-nav -->
+
+        <!-- vip-footer {-->
+        <% include ../../partial/vip-footer %>
+        <!--} vip-footer -->
+
+    </div>
+
+    <script>
+        seajs.config({
+            //alias: {
+            //    "jQuery": "../lib/jquery-1.11.0.js"
+            //}
+            map : [
+                [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140620']
+            ]
+        })
+        seajs.use(['<%= global.viphost %>assets/js/logic/privilege/detail']);
+
+     </script>
+</body>
+</html>

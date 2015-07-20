@@ -1,0 +1,88 @@
+clearfix(){
+	*zoom: 1;
+	&:before,
+	&:after{
+		content: "";
+		display: table;
+		line-height: 0;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+
+/**
+ * 首页-特权设置列表
+ */
+.setting-list {
+	a {
+		display: block;
+		line-height: 20px;
+		border-left: 4px solid #fafafa;
+		padding: 10px 15px 10px 10px;
+		&:hover {
+			background: #fff;
+			border-color: #d6090d;
+			text-decoration: none;
+			.setting-list__config i {
+				visibility: visible;
+			}
+            .setting-list__icon1 {
+                background-position: -22px -110px;
+            }
+            .setting-list__icon2 {
+                background-position: -22px -148px;
+            }
+            .setting-list__icon3 {
+                background-position: -22px -186px;
+            }
+            .setting-list__icon4 {
+                background-position: -22px -224px;
+            }
+            .setting-list__icon5 {
+                background-position: -22px -264px;;
+            }
+		}
+	}
+}
+.setting-list__tit {
+	height: 40px;
+	font-size: 14px;
+	font-family: "Microsoft Yahei";
+	i {
+		display: inline-block;
+        zoom: 1;
+        width: 22px;
+        height: 20px;
+        vertical-align: middle;
+        margin: 0 8px 0 0;
+        background:url(../img/sprite.png) no-repeat 0 -110px;
+	}
+	.setting-list__icon2 {
+		background-position: 0 -148px;
+	}
+	.setting-list__icon3 {
+		background-position: 0 -186px;
+	}
+	.setting-list__icon4 {
+		background-position: 0 -224px;
+	}
+	.setting-list__icon5 {
+		background-position: 0 -264px;
+	}
+}
+.setting-list__config {
+	float: right;
+	i {
+		visibility: hidden;
+		display: inline-block;
+        zoom: 1;
+        width: 6px;
+        height: 11px;
+        vertical-align: -1px;
+        *vertical-align: 1px;
+        margin: 0 4px 0 0;
+        background:url(../img/icons.png) no-repeat -124px -43px;
+	}
+}

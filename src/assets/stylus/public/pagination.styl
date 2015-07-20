@@ -1,0 +1,101 @@
+/**
+ * public 模块
+ * 分页
+ */
+.pagination {
+	width: 100%;
+	clear: both;
+	font-size: 0;
+	text-align: center;
+	a,
+	span,
+	input,
+	button {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		vertical-align: top;
+		white-space: nowrap;
+		font-family: "Microsoft Yahei";
+		font-size: 14px;
+	}
+	a {
+		height: 30px;
+		line-height: 30px;
+		padding: 0 10px;
+		margin:0 5px;
+		color: #606060;
+		background: #f0f0f0;
+		&:hover {
+			text-decoration: none;
+			color: #666;
+			background: #f4f4f4;
+		}
+		&.current {
+			cursor: default;
+			color: #fff;
+			background-color: #d80000;
+		}
+	}
+	span {
+		line-height: 24px;
+		margin: 2px;
+		color: #666;
+	}
+	ins {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		vertical-align: top;
+		margin-left: 2px;
+		text-decoration: none;
+		span {
+			margin: 0 3px;
+			height: 30px;
+			line-height: 30px;
+		}
+		input {
+			width: 2em;
+			height: 24px;
+			line-height: 24px;
+			padding: 2px 4px;
+			border: 1px solid #f0f0f0;
+			text-align: center;
+		}
+		button {
+			margin: 2px 0;
+			height: 26px;
+			background: #7c7c7c;
+			color: #fff;
+			border:0;
+			font-size: 12px;
+			padding: 0 10px;
+			&:hover {
+				background: #999;
+			}
+		}
+	}
+}
+
+.pagination__prev:before {
+	content:"";
+	overflow: hidden;
+	line-height: 0;
+	font-size: 0;
+	border: 4px dashed transparent;
+	border-right-style: solid;
+	border-right-color: #d80000;
+	vertical-align: middle;
+	margin: 0 5px 0 0;
+}
+.pagination__next:after {
+	content:"";
+	overflow: hidden;
+	line-height: 0;
+	font-size: 0;
+	border: 4px dashed transparent;
+	border-left-style: solid;
+	border-left-color: #d80000;
+	vertical-align: middle;
+	margin: 0 0 0 5px;
+}

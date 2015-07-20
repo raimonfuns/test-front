@@ -1,0 +1,5 @@
+/*! Project: vip
+ *  Version: 1.0.0
+ *  Date: 2015-07-20 02:03:34 PM
+ *  Author: 
+ */define("/assets/js/mod/screenWatch-debug",["../lib/jquery.min-debug"],function(a,b,c){function d(){var a=f(window).width();-1!==g&&9>g&&(1200>a?f("body").removeClass("screen-wide"):f("body").addClass("screen-wide"))}function e(){var a=-1;if("Microsoft Internet Explorer"==navigator.appName){var b=navigator.userAgent,c=new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})");null!=c.exec(b)&&(a=parseFloat(RegExp.$1))}else if("Netscape"==navigator.appName){var b=navigator.userAgent,c=new RegExp("Trident/.*rv:([0-9]{1,}[.0-9]{0,})");null!=c.exec(b)&&(a=parseFloat(RegExp.$1))}return a}var f=jQuery=a("../lib/jquery.min-debug"),g=e(),h=(f(window).width()<1200?"narrow":"wide",null);f(window).resize(function(){clearTimeout(h),h=setTimeout(function(){d()},300)}),d()});

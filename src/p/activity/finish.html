@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <title>活动中心</title>
+    <link href="/assets/css/base.css" rel="stylesheet">
+    <link href="/assets/css/activity.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+</head>
+<body>
+    <div class="wrap index-wrap">
+        <!-- vip-header {-->
+        <% include ../../partial/vip-header %>
+        <!--} vip-header -->
+        <div class="wp-main clearfix">
+            <div class="col-side">
+                <!-- 登录后 {-->
+                <div id="loginSider"></div>
+                <!-- } 登录后 -->
+
+
+
+                <!-- 签到 {-->
+                <% include ../../partial/check-in %>
+                <!-- }签到 -->
+
+                <div class="slide-s3 slide-s3--min" id="slideS2">
+                    <a href="http://vip.yy.com/vip/redirect?src=owvip" target="_blank">
+                        <img src="http://dl2.vip.yystatic.com/yyvippicture/2aba89c93b8983b8609d19c17b562eee.png" alt="ow会员" class="width:230px;border:0px;">
+                   </a>
+                </div>
+
+            </div>
+            <div class="col-main">
+                <!-- 进行中的活动 {-->
+	                <div class="box box--big activity-list-box">
+	                    <div class="box__hd" id="rpl-activitynav">
+	                        <h3 class="box__hd__title box__hd__title--gray">已结束的活动</h3>
+					        <div class="box__hd__act">
+					            <a class="box__hd__more" data-flag="active" href="/p/activity/index.html">进行中的活动»</a>
+					        </div>
+	                    </div>
+	                    <div class="box__bd">
+	                        <ul class="activity-list clearfix" id="rpl-activity"></ul>
+	                        <ul class="activity-list clearfix" id="rpl-finishactivity"></ul>
+	                        <p class="activity-listloading" id="rpl-activityloading"></p>
+	                    </div>
+	                </div>
+                <!--} 进行中的活动 -->
+            </div>
+        </div>
+
+        <!-- footer-nav {-->
+        <% include ../../partial/footer-nav %>
+        <!--} footer-nav -->
+
+        <!-- vip-footer {-->
+        <% include ../../partial/vip-footer %>
+        <!--} vip-footer -->
+    </div>
+	<script type="text/html" id="tpl-activity">
+		{{each list}}
+	        <li>
+	            <a href="{{$value.url}}" class="activity-list__pic" target="_blank">
+	                {{if $value.hot}}<span class="activity-list__hot">热门</span>{{/if}}
+	                <img src="{{$value.imgUrl}}" alt="">
+	            </a>
+	            <a href="{{$value.url}}" class="activity-list__link" target="_blank">{{$value.name}}</a>
+	            <span class="activity-list__txt">时间 : {{$dataFormat($value.startDate)}} - {{$dataFormat($value.endDate)}}</span>
+	            <span class="activity-list__txt">说明 : {{$value.desc}}</span>
+	        </li>
+	  	{{/each}}
+	</script>
+    <script>
+	    seajs.config({
+	        map : [
+	            [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140620']
+	        ],
+	        preload: ["/assets/js/lib/jquery.min.js"]
+	    })
+	    seajs.use(["/assets/js/logic/activity_finish"]);
+    </script>
+</body>
+</html>

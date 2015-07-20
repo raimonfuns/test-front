@@ -1,0 +1,31 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>会员三周年尾灯浮窗</title>
+    <script type="text/javascript" src="http://dl2.vip.yystatic.com/assets/js/jquery-1.8.3.min.js"></script>
+	<script src="http://res.udb.duowan.com/js/oauth/udbsdk/qlogin/udb.sdk.qlogin.all.min.js"></script>
+    <style type="text/css">
+        * { margin: 0; padding: 0;}
+        img{border:0;}
+    </style>
+</head>
+<body>
+    <a href="javascript:;">
+        <img src="http://dl1.vip.yystatic.com/yyvippicture/2d2f71ff12b02cedbd05608936e46ebe.png" width="308" height="208">
+    </a>
+    <script type="text/javascript">
+    function GetQueryString(name) {
+	    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r!=null) return (r[2]); return null;
+	}
+    function openWithTicket(url){
+    	UDB.sdk.DiscoverLogin.getTicket(GetQueryString("myuid"), 5034, function(tk){
+			window.open("http://udb.duowan.com/authentication.do?ticket="+tk+
+						"&appid=5034&busiUrl="+encodeURIComponent(url)+"&action=authenticate");	
+		});
+    }
+    $("a").click(function(){
+    	openWithTicket("http://vip.yy.com/vip/redirect?src=vip3rd");
+    });
+    </script>
+</body></html>

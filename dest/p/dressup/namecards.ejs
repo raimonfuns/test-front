@@ -1,0 +1,36 @@
+					<script type="text/html" id="name-cards">
+					<div class="block-body" id="card-block">
+                        <div class="block-fixed">
+                            <div class="block-hidden">
+                                <ul class="list-cards" data-role="content">
+                                {{each list as val key}}
+                                    {{if key%14 == 0}}
+                                    <li>
+                                        <div class="card-box clearfix">
+                                    {{/if}}
+                                            <div class="card-goods" card="">
+                                                <a href="javascript:;"><img src="{{list[key].bg_url}}" alt="{{list[key].name}}"></a>
+                                                <div class="card-menu">
+                                                    <div class="card-bar">
+                                                        <a class="gift" href="javascript:;" price="{{list[key].price}}" type="{{list[key].dressUpType}}" pid="{{list[key].pid}}"  free="{{list[key].is_free}}">赠送</a>
+                                                        <a class="exchange" href="javascript:;" price="{{list[key].price}}" type="{{list[key].dressUpType}}" pid="{{list[key].pid}}"  free="{{list[key].is_free}}">兑换</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    {{if (key+1)%14 == 0||(key+1)==list.length}}      
+                                        </div>
+                                    </li>
+                                    {{/if}}
+                                {{/each}}
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <ul class="list-btn" id="card-block-btn">
+                            {{each list as val key}}
+                            	{{if key%14 == 0}}<li data-role="trigger">{{/if}}
+                            	{{if (key+1)%14 == 0||(key+1)==list.length}}</li>{{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                    </script>

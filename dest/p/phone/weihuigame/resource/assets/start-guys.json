@@ -1,0 +1,27 @@
+{
+"res":{
+	"guy0": {"x":0,"y":50,"w":207,"h":259},
+	"guy1": {"x":229,"y":0,"w":173,"h":309},
+	"guy2": {"x":418,"y":50,"w":182,"h":259}
+},
+"frames": {
+	"super": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"guy0","x":0,"y":0}
+		]
+	},
+	"baby": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"guy1","x":0,"y":0}
+		]
+	},
+	"baobao": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"guy2","x":0,"y":0}
+		]
+	}
+}
+}

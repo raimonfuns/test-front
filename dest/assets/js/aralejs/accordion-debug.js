@@ -1,0 +1,5 @@
+/*! Project: vip
+ *  Version: 1.0.0
+ *  Date: 2015-07-20 02:03:34 PM
+ *  Author: 
+ */define("/assets/js/aralejs/accordion-debug",["./switchable-debug","../lib/jquery.min-debug","../araleWidget/widget-debug","../araleBase/base-debug","../araleBase/class-debug","../araleBase/events-debug","../araleBase/aspect-debug","../araleBase/attribute-debug","../araleWidget/daparser-debug","../araleWidget/auto-render-debug","./plugins/effects-debug","./plugins/easing-debug","./plugins/autoplay-debug","./plugins/circular-debug"],function(a,b,c){var d=a("./switchable-debug"),e=d.extend({attrs:{triggerType:"click",multiple:!1,autoplay:!1},switchTo:function(a){this.get("multiple")?this._switchTo(a,a):d.prototype.switchTo.call(this,a)},_switchTrigger:function(a,b){this.get("multiple")?this.get("triggers").eq(a).toggleClass(this.get("activeTriggerClass")):d.prototype._switchTrigger.call(this,a,b)},_switchPanel:function(a){this.get("multiple")?a.toPanels.toggle():d.prototype._switchPanel.call(this,a)}});c.exports=e});

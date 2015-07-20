@@ -1,0 +1,5 @@
+/*! Project: vip
+ *  Version: 1.0.0
+ *  Date: 2015-07-20 02:03:34 PM
+ *  Author: 
+ */define("/assets/js/aralejs/plugins/autoplay-debug",["../../lib/jquery.min-debug"],function(a,b,c){function d(a,b){function c(){c.stop(),d=setTimeout(a,b)}b=b||200;var d;return c.stop=function(){d&&(clearTimeout(d),d=0)},c}function e(a){var b=g.scrollTop(),c=b+g.height(),d=a.offset().top,e=d+a.height();return c>d&&e>b}var f=jQuery=a("../../lib/jquery.min-debug"),g=f(window);c.exports={attrs:{autoplay:!1,interval:5e3},isNeeded:function(){return this.get("autoplay")},install:function(){function a(){b(),j.paused=!1,c=setInterval(function(){j.paused||j.next()},i)}function b(){c&&(clearInterval(c),c=null),j.paused=!0}var c,f=this.element,h="."+this.cid,i=this.get("interval"),j=this;a(),this.stop=b,this.start=a,this._scrollDetect=d(function(){j[e(f)?"start":"stop"]()}),g.on("scroll"+h,this._scrollDetect),this.element.hover(b,a)},destroy:function(){var a="."+this.cid;this.stop&&this.stop(),this._scrollDetect&&(this._scrollDetect.stop(),g.off("scroll"+a))}}});

@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>去死吧！黄牛</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        div, canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+        .fix{
+            position: fixed;
+            bottom: -2px;
+            width: 100%;
+        }
+        .fix1{
+            bottom:0;
+            display: none;
+        }
+        .fix-child{
+            position: relative;
+            margin: 0 auto -3px auto;
+
+        }
+        .fix-child .img{
+            margin:0 auto;
+            display: block;
+            height: 40px;
+            background: transparent url(http://file.do.yy.com/group3/M02/3C/4A/tz0GSFSjzySAARZYAAAfC-ottBw057.png) no-repeat top center;
+            background-size: 490px 40px;
+
+        }
+        .img-close{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+<div style="position:relative;" id="gameDiv"></div>
+
+<div class="fix" id="adv">
+    <div class="fix-child">
+        <a href="javascript:;" onclick="gotoAdv();" class="img">
+            <!-- <img src="http://file.do.yy.com/group3/M02/3C/4A/tz0GSFSjzySAARZYAAAfC-ottBw057.png" class="img" id="advImg" width="490" height="40"> -->
+        </a>
+        <a href="javascript:;" onclick="closeAdv();" class="img-close" id="closeBtn">
+            <img src="http://vip.yy.com/p/phone/weihuigame/resource/assets/game-adv-close.png" width="30" height="30">
+        </a>
+    </div>
+</div>
+
+<script>var document_class = "GameApp";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js"></script>
+<script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+    }else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+    //打开广告
+    function gotoAdv(){
+        //上报数据
+        //report("10004825");
+        window.open("http://timely.yy.com/","_blank");
+    }
+
+    function closeAdv(){
+        document.getElementById("adv").style.display = "none";
+    }
+
+    window.shareData = {
+        "imgUrl": "http://dl4.vip.yystatic.com/yyvippicture/efa3ae6153c12285bbc05259dd1995e1.jpg",
+        "timeLineLink": "http://vip.yy.com/p/phone/killgame/index.html",
+        "tTitle": "回家买不了票？都是黄牛惹的祸！",
+        "tContent": "回家买不了票？都是黄牛惹的祸！"
+    };
+
+    /*function share(n,p){
+        window.shareData.tTitle = "我刚刚打死了"+n+"只黄牛，领先了全国"+p+"%的人";
+    }*/
+    function share(n){
+        window.shareData.tTitle = "我刚刚打死了"+n+"只黄牛";
+    }
+
+
+    var mebtnopenurl = 'http://vip.yy.com/p/phone/killgame/index.html';
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+   
+    WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+        WeixinJSBridge.invoke('sendAppMessage', {
+            "img_url": window.shareData.imgUrl,
+            "link": window.shareData.timeLineLink,
+            "desc": window.shareData.tContent,
+            "title": window.shareData.tTitle
+        }, function(res) {
+            document.location.href = mebtnopenurl;
+        })
+    });
+
+    WeixinJSBridge.on('menu:share:timeline', function(argv) {
+        WeixinJSBridge.invoke('shareTimeline', {
+            "img_url": window.shareData.imgUrl,
+            "img_width": "640",
+            "img_height": "640",
+            "link": window.shareData.timeLineLink,
+            "desc": window.shareData.tContent,
+            "title": window.shareData.tTitle
+        }, function(res) {
+            document.location.href = mebtnopenurl;
+        });
+    });
+
+
+    WeixinJSBridge.on('menu:share:weibo', function(argv) {
+        WeixinJSBridge.invoke('shareWeibo', {
+            "content": window.shareData.tContent,
+            "url": window.shareData.timeLineLink
+        }, function(res) {
+            document.location.href = mebtnopenurl;
+        });
+    });
+
+    }, false);
+</script>
+</body>
+</html>

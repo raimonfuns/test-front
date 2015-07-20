@@ -1,0 +1,113 @@
+{{if result}} 		
+	{{if data.info.vipUser}}
+            <!-- 登录后 {-->
+        <div class="logged-in">
+            <div class="user-profile">
+                <div class="user-profile__pic">
+                    <a href="javascript:;"><img src="http://dl.vip.yy.com/yyvippicture/webvipcom/1.jpg" alt="" id="userAvatar"></a>
+                </div>
+                <div class="user-profile__name">
+                    {{data.nick}}
+                </div>
+                <div class="user-profile__link">
+                    <a href="/p/profile/index.html" target="_self">[个人中心]</a><a href="javascript:;" onclick="udbLogout();">[退出]</a>
+                </div>
+                <div class="user-profile__level">
+                    <i class="vip-level v{{data.info.vipLevel}}"></i>
+                    {{if data.info.vipLevel < 8}}
+	                    {{if data.info.feeType == 0}}
+							<i class="icon-month"></i>
+	                    {{else if data.info.feeType == 1}}
+	                    	<i class="icon-year"></i>
+	                    {{else}}
+	                    	<i class="icon-seasion"></i>
+	                    {{/if}}
+                   {{/if}}
+                    <i id="iconPurple"></i>
+
+                    <!--<i class="icon-show"></i> -->
+                </div>
+            </div>
+            <div class="vip-progress">
+                
+                <div class="vip-progress__txt">
+                    等级 : Lv.{{data.info.vipLevel}}<span class="vip-progress__txt__gray">({{data.info.score}}/{{data.info.lvScore}})</span>
+                    <!-- <a href="">升级</a> -->
+                </div>
+                <div class="vip-progress__bar"><span style="width:{{data.info.lvRate}}%"></span></div>
+                <div class="vip-progress__txt">
+                    成长率 : {{data.info.incPerDay}}点/天
+                    {{if data.info.incPerDay !=20}}
+                    <a href="/vip/pay" class="user-profile-common__btn" target="_blank">加速</a>
+                    {{/if}}
+                </div>
+                <div class="vip-progress__txt">
+                    会员到期 : {{data.info.expireTime}}
+                    <a href="/vip/pay" class="user-profile-common__btn" target="_blank">续费</a>
+                </div>
+                {{if data.info.owVip}}
+                <div class="vip-progress__txt">
+                    OW会员到期 : {{data.info.owVipExpireTime}} 
+                    <a href="/vip/vmall2/owvippay" class="user-profile-common__btn" target="_blank">续费</a>
+                </div>
+                {{/if}}
+                <a class="not-purple-popup" href="http://vip.yy.com/vip/redirect?src=pay.yyvip" target="_blank">
+                    紫钻每日会员成长加成<strong>最高15点</strong>!<br/>另享积分、Y秀等多种特权&nbsp;&nbsp;开通&gt;&gt;
+                </a>
+            </div>
+            {{if data.leftDays < 8}}
+            <div class="logged-in__renew">
+                <p>尊贵的VIP用户,您的会员资格快到期,请进行续费.</p>
+                <a href="/vip/pay" target="_blank" class="logged-in__renew__btn">续费会员</a>
+                <a href="javascript:;" class="logged-in__renew_close" id="loggedInRenewClose">&times;</a>
+            </div>
+            {{/if}}
+        </div>
+        <!-- } 登录后 -->
+	{{else}}
+        <!-- 登录后 {-->
+        <div class="logged-in">
+            <div class="user-profile">
+                <div class="user-profile__pic">
+                   <a href="javascript:;"><img src="http://dl.vip.yy.com/yyvippicture/webvipcom/1.jpg" alt="" id="userAvatar"></a>
+                </div>
+                <div class="user-profile__name">
+                   {{data.nick}}
+                </div>
+                <div class="user-profile__link">
+                    <a href="/p/profile/index.html" target="_self">[个人中心]</a><a href="javascript:;" onclick="udbLogout();">[退出]</a>
+                </div>
+                <div class="user-profile__level">
+                    <i class="vip-level v1-gray"></i><i class="icon-year-gray"></i><!--<i class="icon-seasion-gray"></i><i class="icon-month-gray"></i>--><!--<i class="icon-show-gray"></i>-->
+                </div>
+            </div>
+            <div class="login-box__apply"><a href="/vip/pay" target="_blank">开通会员</a></div>
+            <ul class="login-box__info">
+                <li><i class="icon1"></i>年费会员尊享20点/天，加速300%</li>
+                <li><i class="icon2"></i>季费会员尊享10点/天，加速100%</li>
+            </ul>
+        </div>
+        <!-- } 登录后 -->
+
+
+	{{/if}}
+{{else}}
+     <!-- 未登录 {-->
+    <div class="not-logged-in">
+        <div class="login-box">
+            <div class="login-box__login"><i></i><a href="javascript:;" onclick="showUdbLogin();">登录</a>查看更多信息</div>
+            <div class="login-box__txt">开通YY会员享受30多种会员特权</div>
+            <div class="login-box__apply"><a href="/vip/pay" target="_blank">开通会员</a></div>
+            <ul class="login-box__info">
+                <li><i class="icon1"></i>年费会员尊享20点/天，加速300%</li>
+                <li><i class="icon2"></i>季费会员尊享10点/天，加速100%</li>
+            </ul>
+        </div>
+    </div>
+    <!-- } 未登录 -->
+
+{{/if}}            
+    
+    <div class="bright-box" data-edt-pid="2" data-edt-mode="0">
+        <!-- <a href="http://hd.vip.yy.com/1409b2/index" target="_blank"><img src="http://dl4.vip.yystatic.com/yyvippicture/fb336c8bf75d5762c80583292386134d.png" alt="会员紫钻" ></a> -->
+    </div>

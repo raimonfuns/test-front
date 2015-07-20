@@ -1,0 +1,75 @@
+/**
+ * 页面布局
+ */
+.index-main {
+    padding-top: 40px;
+	margin: 0 auto 60px;
+	width: 1000px;
+    .col-main {
+        width: 500px;
+    }
+}
+.col-side {
+	float:left;
+	width: 230px;
+    display: inline;
+}
+
+.col-main {
+    float:left;
+    margin: 0 20px;
+    display: inline;
+}
+
+.wp-main {
+    padding-top: 40px;
+    margin: 0 auto 30px;
+    width: 1000px;
+    .col-main {
+        float:left;
+        margin: 0 0 0 40px;
+        width: 730px;
+    }
+}
+
+
+
+/**
+ * 无响应式的页面布局
+ */
+.wp-col3-main {
+    padding-top: 25px;
+    margin: 0 auto 60px;
+    width: 1000px;
+    .col-main {
+        width: 500px;
+    }
+}
+
+/**
+ * 首页响应式布局
+ */
+@media screen and (min-width:1200px) {
+    .index-wrap {
+        .index-main {
+            width: 1180px;
+            .col-main {
+                width: 680px;
+            }
+        }
+    }
+}
+
+/**
+ * 兼容 ie6-8 响应式布局
+ */
+.screen-wide {
+     .index-wrap {
+        .index-main {
+            width: 1180px;
+            .col-main {
+                width: 680px;
+            }
+        }
+    }
+}

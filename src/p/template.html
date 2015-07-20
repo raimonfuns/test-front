@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <title>template</title>
+    <link href="/assets/css/base.css" rel="stylesheet">
+    <link href="/assets/css/activity.css" rel="stylesheet">
+    <script src="http://dl2.vip.yystatic.com/assets/js/sea2.0.0.js"></script>
+</head>
+<body>
+	
+<script type="text/html" id="tpl-mainslide">
+	<ul>
+		{{each list as value}} 
+			<li>{{value}}</li>
+		{{/each}}
+	</ul>
+</script>
+<script>
+    seajs.config({
+        map : [
+            [ /^(.*\.(?:js))(.*)$/i, '$1?_=20140620']
+        ],
+        preload: ["/assets/js/lib/jquery.min.js"]
+    })
+    seajs.use(["/assets/js/logic/template"]);
+</script>
+</body>
+</html>
